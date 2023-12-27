@@ -18,10 +18,6 @@
   <script src="public/admin/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
   <script type="text/javascript" src="public/admin/assets/js/select2.min.js"></script>
   <script type="text/javascript" src="public/admin/assets/js/jquery.datetimepicker.full.min.js"></script>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <style>
         header.masthead {
@@ -121,30 +117,77 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Uncle Jov's"></div>
-                                        <div class="card-body">
-                                            <div class="row align-items-center justify-content-center text-center h-100">
-                                                <div class="">
-                                                    <div>
-                                                        <h3><b class="filter-txt">Uncle Jov's</b></h3>
-                                                        <small><i>Roxas Dr 5200 Calapan Oriental Mindoro</i></small>
-                                                    </div>
-                                                    <div>
-                                                        <span class="truncate" style="font-size: inherit;"><small>Uncle Jov's is famous for their burgers, this place is perfect for Celebrating Parties and hanging out with family and friends.</small></span>
-                                                        <br>
-                                                        <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 300</span>
-                                                        <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
-                                                    </div>
+                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel">
+                                        <img src="public/venuepics/ujwallpaper.png" alt="Uncle Jov's">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row align-items-center justify-content-center text-center h-100">
+                                            <div class="">
+                                                <div>
+                                                    <h3><b class="filter-txt">Uncle Jov's</b></h3>
+                                                    <small><i>Roxas Dr 5200 Calapan Oriental Mindoro</i></small>
+                                                </div>
+                                                <div>
+                                                    <span class="truncate" style="font-size: inherit;">
+                                                        <small>Uncle Jov's is famous for their burgers, this place is perfect for Celebrating Parties and hanging out with family and friends.</small>
+                                                    </span>
+                                                    <br>
+                                                    <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 300</span>
+                                                    <br><br>
+                                                    <button class="btn btn-primary book-venue align-self-end" type="button" id="bookButton">Book</button>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
                                 </div>
-                            </div><br>
+                            </div>
 
-                            <div class="col-md-6">
-                                <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Halcon's"></div>
+                                <!-- Modal -->
+                                <div class="modal" id="bookingModal1">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Booking Confirmation</h4>
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            </div>
+                                            <!-- Modal Body -->
+                                            <div class="modal-body">
+                                                <form action="">
+                                                    <label for="fname">Full Name</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your Full Name"><br>
+
+                                                    <label for="fname">Address</label><br>
+                                                    <textarea type="text" id="fname" name="fname" placeholder="Enter your Address"></textarea><br>
+                                                    
+                                                    <label for="fname">Email</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your Email"><br>
+
+                                                    <label for="fname">Contact</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your contact number"><br>
+
+                                                    <label for="fname">Duration</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter how many days you will stay"><br>
+
+                                                    <label for="fname">Desired Event Schedule</label><br>
+                                                    <input type="datetime-local" id="Test_DatetimeLocal">
+                                                </form>
+                                            </div>
+
+                                            <!-- Modal Footer -->
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">Book Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <div class="card venue-list">
+                                        <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel">
+                                            <img src="public/venuepics/ujwallpaper.png" alt="Uncle Jov's">
+                                        </div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
@@ -153,21 +196,66 @@
                                                         <small><i>Filipiniana Complex, Sto. Niño 5200 Calapan City, Oriental Mindoro</i></small>
                                                     </div>
                                                     <div>
-                                                        <span class="truncate" style="font-size: inherit;"><small>Best choice for Birthday Party, Wedding, and other Occations.</small></span>
+                                                        <span class="truncate" style="font-size: inherit;">
+                                                            <small>Best choice for Birthday Party, Wedding, and other Occations.</small>
+                                                        </span>
                                                         <br>
                                                         <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 250</span>
                                                         <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
+                                                        <button class="btn btn-primary book-venue align-self-end" type="button" id="bookButton">Book</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
                                 </div>
-                            </div><br>
 
-                            <div class="col-md-6">
-                                <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Orange Dutch Cafe"></div>
+                                <!-- Modal -->
+                                <div class="modal" id="bookingModal2">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Booking Confirmation</h4>
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            </div>
+                                            <!-- Modal Body -->
+                                            <div class="modal-body">
+                                                <form action="">
+                                                    <label for="fname">Full Name</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your Full Name"><br>
+
+                                                    <label for="fname">Address</label><br>
+                                                    <textarea type="text" id="fname" name="fname" placeholder="Enter your Address"></textarea><br>
+                                                    
+                                                    <label for="fname">Email</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your Email"><br>
+
+                                                    <label for="fname">Contact</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your contact number"><br>
+
+                                                    <label for="fname">Duration</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter how many days you will stay"><br>
+
+                                                    <label for="fname">Desired Event Schedule</label><br>
+                                                    <input type="datetime-local" id="Test_DatetimeLocal">
+                                                </form>
+                                            </div>
+
+                                            <!-- Modal Footer -->
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">Book Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <div class="card venue-list">
+                                        <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel">
+                                            <img src="public/venuepics/ujwallpaper.png" alt="Uncle Jov's">
+                                        </div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
@@ -176,21 +264,66 @@
                                                         <small><i>J.P Rizal Street, 5200, Calapan City, Oriental Mindoro</i></small>
                                                     </div>
                                                     <div>
-                                                        <span class="truncate" style="font-size: inherit;"><small>Private Birthday Party, Wedding and other Occations with family and some guests.</small></span>
+                                                        <span class="truncate" style="font-size: inherit;">
+                                                            <small>Private Birthday Party, Wedding and other Occations with family and some guests.</small>
+                                                        </span>
                                                         <br>
                                                         <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 280</span>
                                                         <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
+                                                        <button class="btn btn-primary book-venue align-self-end" type="button" id="bookButton">Book</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
                                 </div>
-                            </div><br>
 
-                            <div class="col-md-6">
-                                <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Blossom's"></div>
+                                <!-- Modal -->
+                                <div class="modal" id="bookingModal3">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Booking Confirmation</h4>
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            </div>
+                                            <!-- Modal Body -->
+                                            <div class="modal-body">
+                                                <form action="">
+                                                    <label for="fname">Full Name</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your Full Name"><br>
+
+                                                    <label for="fname">Address</label><br>
+                                                    <textarea type="text" id="fname" name="fname" placeholder="Enter your Address"></textarea><br>
+                                                    
+                                                    <label for="fname">Email</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your Email"><br>
+
+                                                    <label for="fname">Contact</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your contact number"><br>
+
+                                                    <label for="fname">Duration</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter how many days you will stay"><br>
+
+                                                    <label for="fname">Desired Event Schedule</label><br>
+                                                    <input type="datetime-local" id="Test_DatetimeLocal">
+                                                </form>
+                                            </div>
+
+                                            <!-- Modal Footer -->
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">Book Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <div class="card venue-list">
+                                        <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel">
+                                            <img src="public/venuepics/ujwallpaper.png" alt="Uncle Jov's">
+                                        </div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
@@ -199,21 +332,66 @@
                                                         <small><i>J.P. Rizal Street, San Vicente North Mimaropa</i></small>
                                                     </div>
                                                     <div>
-                                                        <span class="truncate" style="font-size: inherit;"><small>Private Parties, Weddings, Birthday party, with limited participants.</small></span>
+                                                        <span class="truncate" style="font-size: inherit;">
+                                                            <small>Private Parties, Weddings, Birthday party, with limited participants.</small>
+                                                        </span>
                                                         <br>
                                                         <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 500</span>
                                                         <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
+                                                        <button class="btn btn-primary book-venue align-self-end" type="button" id="bookButton">Book</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
                                 </div>
-                            </div><br>
 
-                            <div class="col-md-6">
-                                <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Cafe Meow"></div>
+                                <!-- Modal -->
+                                <div class="modal" id="bookingModal4">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Booking Confirmation</h4>
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            </div>
+                                            <!-- Modal Body -->
+                                            <div class="modal-body">
+                                                <form action="">
+                                                    <label for="fname">Full Name</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your Full Name"><br>
+
+                                                    <label for="fname">Address</label><br>
+                                                    <textarea type="text" id="fname" name="fname" placeholder="Enter your Address"></textarea><br>
+                                                    
+                                                    <label for="fname">Email</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your Email"><br>
+
+                                                    <label for="fname">Contact</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your contact number"><br>
+
+                                                    <label for="fname">Duration</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter how many days you will stay"><br>
+
+                                                    <label for="fname">Desired Event Schedule</label><br>
+                                                    <input type="datetime-local" id="Test_DatetimeLocal">
+                                                </form>
+                                            </div>
+
+                                            <!-- Modal Footer -->
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">Book Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <div class="card venue-list">
+                                        <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel">
+                                            <img src="public/venuepics/ujwallpaper.png" alt="Uncle Jov's">
+                                        </div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
@@ -222,21 +400,66 @@
                                                         <small><i>Ilaya, 5200, Calapan City, Oriental Mindoro</i></small>
                                                     </div>
                                                     <div>
-                                                        <span class="truncate" style="font-size: inherit;"><small>Birthday parties, Celebrating Occations with selected guest like family, friends, or co-workers.</small></span>
+                                                        <span class="truncate" style="font-size: inherit;">
+                                                            <small>Birthday parties, Celebrating Occations with selected guest like family, friends, or co-workers.</small>
+                                                        </span>
                                                         <br>
                                                         <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 250</span>
                                                         <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
+                                                        <button class="btn btn-primary book-venue align-self-end" type="button" id="bookButton">Book</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
                                 </div>
-                            </div><br>
 
-                            <div class="col-md-6">
-                                <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Tagpuan Bistro"></div>
+                                <!-- Modal -->
+                                <div class="modal" id="bookingModal5">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Booking Confirmation</h4>
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            </div>
+                                            <!-- Modal Body -->
+                                            <div class="modal-body">
+                                                <form action="">
+                                                    <label for="fname">Full Name</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your Full Name"><br>
+
+                                                    <label for="fname">Address</label><br>
+                                                    <textarea type="text" id="fname" name="fname" placeholder="Enter your Address"></textarea><br>
+                                                    
+                                                    <label for="fname">Email</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your Email"><br>
+
+                                                    <label for="fname">Contact</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your contact number"><br>
+
+                                                    <label for="fname">Duration</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter how many days you will stay"><br>
+
+                                                    <label for="fname">Desired Event Schedule</label><br>
+                                                    <input type="datetime-local" id="Test_DatetimeLocal">
+                                                </form>
+                                            </div>
+
+                                            <!-- Modal Footer -->
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">Book Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <div class="card venue-list">
+                                        <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel">
+                                            <img src="public/venuepics/ujwallpaper.png" alt="Uncle Jov's">
+                                        </div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
@@ -245,21 +468,66 @@
                                                         <small><i>2f Tomas Montellano Bldg., Gov.Infantado St., Sta. Maria Village , 5200, Calapan City, Oriental Mindoro</i></small>
                                                     </div>
                                                     <div>
-                                                        <span class="truncate" style="font-size: inherit;"><small>You can celebrate here with your friends and family.</small></span>
+                                                        <span class="truncate" style="font-size: inherit;">
+                                                            <small>Small Celebration with friends and family.</small>
+                                                        </span>
                                                         <br>
                                                         <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 150</span>
                                                         <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
+                                                        <button class="btn btn-primary book-venue align-self-end" type="button" id="bookButton">Book</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
                                 </div>
-                            </div><br>
 
-                            <div class="col-md-6">
-                                <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Shakey's Pizza Parlor"></div>
+                                <!-- Modal -->
+                                <div class="modal" id="bookingModal6">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Booking Confirmation</h4>
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            </div>
+                                            <!-- Modal Body -->
+                                            <div class="modal-body">
+                                                <form action="">
+                                                    <label for="fname">Full Name</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your Full Name"><br>
+
+                                                    <label for="fname">Address</label><br>
+                                                    <textarea type="text" id="fname" name="fname" placeholder="Enter your Address"></textarea><br>
+                                                    
+                                                    <label for="fname">Email</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your Email"><br>
+
+                                                    <label for="fname">Contact</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your contact number"><br>
+
+                                                    <label for="fname">Duration</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter how many days you will stay"><br>
+
+                                                    <label for="fname">Desired Event Schedule</label><br>
+                                                    <input type="datetime-local" id="Test_DatetimeLocal">
+                                                </form>
+                                            </div>
+
+                                            <!-- Modal Footer -->
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">Book Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <div class="card venue-list">
+                                        <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel">
+                                            <img src="public/venuepics/ujwallpaper.png" alt="Uncle Jov's">
+                                        </div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
@@ -268,21 +536,66 @@
                                                         <small><i>J.P. Rizal Street, Brgy. Camilmil, Calapan City, Oriental Mindoro</i></small>
                                                     </div>
                                                     <div>
-                                                        <span class="truncate" style="font-size: inherit;"><small>Perfect place to conduct any social gatherings.</small></span>
+                                                        <span class="truncate" style="font-size: inherit;">
+                                                            <small>Perfect place to conduct any social gatherings.</small>
+                                                        </span>
                                                         <br>
-                                                        <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 200</span>
+                                                        <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 199</span>
                                                         <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
+                                                        <button class="btn btn-primary book-venue align-self-end" type="button" id="bookButton">Book</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
                                 </div>
-                            </div><br>
 
-                            <div class="col-md-6">
-                                <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Filipiniana Hotel"></div>
+                                <!-- Modal -->
+                                <div class="modal" id="bookingModal7">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Booking Confirmation</h4>
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            </div>
+                                            <!-- Modal Body -->
+                                            <div class="modal-body">
+                                                <form action="">
+                                                    <label for="fname">Full Name</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your Full Name"><br>
+
+                                                    <label for="fname">Address</label><br>
+                                                    <textarea type="text" id="fname" name="fname" placeholder="Enter your Address"></textarea><br>
+                                                    
+                                                    <label for="fname">Email</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your Email"><br>
+
+                                                    <label for="fname">Contact</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your contact number"><br>
+
+                                                    <label for="fname">Duration</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter how many days you will stay"><br>
+
+                                                    <label for="fname">Desired Event Schedule</label><br>
+                                                    <input type="datetime-local" id="Test_DatetimeLocal">
+                                                </form>
+                                            </div>
+
+                                            <!-- Modal Footer -->
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">Book Now</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <div class="card venue-list">
+                                        <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel">
+                                            <img src="public/venuepics/ujwallpaper.png" alt="Uncle Jov's">
+                                        </div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
@@ -291,44 +604,66 @@
                                                         <small><i>M. Roxas St., Brgy Sto. Nino, Calapan City, Oriental Mindoro</i></small>
                                                     </div>
                                                     <div>
-                                                        <span class="truncate" style="font-size: inherit;"><small>Perfect place to conduct big social gatherings like wedding or party.</small></span>
+                                                        <span class="truncate" style="font-size: inherit;">
+                                                            <small>Perfect place to conduct big wedding or party.</small>
+                                                        </span>
                                                         <br>
                                                         <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 850</span>
                                                         <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
-
+                                                        <button class="btn btn-primary book-venue align-self-end" type="button" id="bookButton">Book</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
                                 </div>
-                            </div><br>
-                                <div class="modal" id="bookingModal" tabindex="-1" role="dialog">
-                                    <div class="modal-dialog" role="document">
+
+                                <!-- Modal -->
+                                <div class="modal" id="bookingModal8">
+                                    <div class="modal-dialog">
                                         <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title">Booking Request</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <!-- You can customize the content of the modal here -->
-                                            <p>Modal content goes here.</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Submit Booking</button>
-                                        </div>
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Booking Confirmation</h4>
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            </div>
+                                            <!-- Modal Body -->
+                                            <div class="modal-body">
+                                                <form action="">
+                                                    <label for="fname">Full Name</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your Full Name"><br>
+
+                                                    <label for="fname">Address</label><br>
+                                                    <textarea type="text" id="fname" name="fname" placeholder="Enter your Address"></textarea><br>
+                                                    
+                                                    <label for="fname">Email</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your Email"><br>
+
+                                                    <label for="fname">Contact</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter your contact number"><br>
+
+                                                    <label for="fname">Duration</label><br>
+                                                    <input type="text" id="fname" name="fname" placeholder="Enter how many days you will stay"><br>
+
+                                                    <label for="fname">Desired Event Schedule</label><br>
+                                                    <input type="datetime-local" id="Test_DatetimeLocal">
+                                                </form>
+                                            </div>
+
+                                            <!-- Modal Footer -->
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">Book Now</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            
             <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
                 <div class="container">
                     <a class="navbar-brand js-scroll-trigger" href="./">Event Management System</a>
@@ -367,35 +702,23 @@
             </footer>
 
             <script>
-                $('.book-venue').click(function(){
-                    uni_modal("Submit Booking Request","booking.php?venue_id="+$(this).attr('data-id'))
-                })
-                $('.venue-list .carousel img').click(function(){
-                    viewer_modal($(this).attr('src'))
-                })
-                $('.book-venue').click(function () {
-                    // Set the modal content dynamically based on the venue details
-                    var venueName = $(this).closest('.card-body').find('h3').text();
-                    var venueLocation = $(this).closest('.card-body').find('small').text();
-                    
-                    // You can customize the modal content here
-                    var modalContent = `<p>Booking request for <strong>${venueName}</strong> located at <em>${venueLocation}</em>.</p>`;
-
-                    // Set the modal content
-                    $('#bookingModal .modal-body').html(modalContent);
-
-                    // Show the modal
-                    $('#bookingModal').modal('show');
+                // Add this script to handle the modal behavior
+                document.getElementById('bookButton').addEventListener('click', function() {
+                // Show the modal
+                document.getElementById('bookingModal1').style.display = 'block';
                 });
 
-                $('.venue-list .carousel img').click(function () {
-                    // You can implement your image viewer logic here
+                // Close the modal when the close button is clicked
+                document.querySelector('.modal .close').addEventListener('click', function() {
+                document.getElementById('bookingModal1').style.display = 'none';
                 });
 
+                // Close the modal if the user clicks outside of it
+                window.addEventListener('click', function(event) {
+                if (event.target === document.getElementById('bookingModal1')) {
+                    document.getElementById('bookingModal1').style.display = 'none';
+                }
+                });
             </script>
-
-            <script>
-</script>
-
   </body>
 </html>
