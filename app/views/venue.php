@@ -35,7 +35,7 @@
         }
 
         body {
-            background: gray;
+            background: #404040 !important;
         }
 
         .venue-list{

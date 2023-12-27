@@ -24,6 +24,11 @@
         background-size: cover;
 	}
 
+    section{
+        background: #404040 !important;
+        color: white;
+    }
+
     footer {
         background: #000000e6 !important;
         position: relative;
