@@ -5,7 +5,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
   <title>Venue</title>
-  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="public/admin/assets/img/favicon.ico" />
   <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
@@ -21,7 +21,7 @@
 
     <style>
         header.masthead {
-		    background-image: url("/public/homebg.jpg");
+		    background-image: url("public/homebg.jpg");
 		    background-repeat: no-repeat;
 		    background-size: cover;
 		}
@@ -35,7 +35,7 @@
         }
 
         body {
-            background-image: url('/public/homebg.jpg');
+            background-image: url('public/homebg.jpg');
         }
 
         .venue-list{
@@ -112,7 +112,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="/public/venuepics/ujwallpaper.png" alt="Uncle Jov's"></div>
+                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Uncle Jov's"></div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
@@ -135,7 +135,7 @@
 
                             <div class="col-md-6">
                                 <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="/public/venuepics/ujwallpaper.png" alt="Halcon's"></div>
+                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Halcon's"></div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
@@ -158,7 +158,7 @@
 
                             <div class="col-md-6">
                                 <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="/public/venuepics/ujwallpaper.png" alt="Orange Dutch Cafe"></div>
+                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Orange Dutch Cafe"></div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
@@ -181,7 +181,7 @@
 
                             <div class="col-md-6">
                                 <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="/public/venuepics/ujwallpaper.png" alt="Blossom's"></div>
+                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Blossom's"></div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
@@ -204,7 +204,7 @@
 
                             <div class="col-md-6">
                                 <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="/public/venuepics/ujwallpaper.png" alt="Cafe Meow"></div>
+                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Cafe Meow"></div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
@@ -227,7 +227,7 @@
 
                             <div class="col-md-6">
                                 <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="/public/venuepics/ujwallpaper.png" alt="Tagpuan Bistro"></div>
+                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Tagpuan Bistro"></div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
@@ -250,7 +250,7 @@
 
                             <div class="col-md-6">
                                 <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="/public/venuepics/ujwallpaper.png" alt="Shakey's Pizza Parlor"></div>
+                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Shakey's Pizza Parlor"></div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
@@ -273,7 +273,7 @@
 
                             <div class="col-md-6">
                                 <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="/public/venuepics/ujwallpaper.png" alt="Filipiniana Hotel"></div>
+                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Filipiniana Hotel"></div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
