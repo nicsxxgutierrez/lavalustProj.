@@ -83,6 +83,11 @@
             align-items: center ;
         }
 
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
         footer {
             background: #000000e6 !important;
             position: absolute;
