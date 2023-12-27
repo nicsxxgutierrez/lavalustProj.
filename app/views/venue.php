@@ -18,6 +18,10 @@
   <script src="public/admin/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
   <script type="text/javascript" src="public/admin/assets/js/select2.min.js"></script>
   <script type="text/javascript" src="public/admin/assets/js/jquery.datetimepicker.full.min.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <style>
         header.masthead {
@@ -130,7 +134,7 @@
                                                         <br>
                                                         <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 300</span>
                                                         <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button">Book</button>
+                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -153,7 +157,7 @@
                                                         <br>
                                                         <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 250</span>
                                                         <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button">Book</button>
+                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -176,7 +180,7 @@
                                                         <br>
                                                         <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 280</span>
                                                         <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button">Book</button>
+                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -199,7 +203,7 @@
                                                         <br>
                                                         <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 500</span>
                                                         <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button">Book</button>
+                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -222,7 +226,7 @@
                                                         <br>
                                                         <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 250</span>
                                                         <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button">Book</button>
+                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -245,7 +249,7 @@
                                                         <br>
                                                         <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 150</span>
                                                         <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button">Book</button>
+                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -268,7 +272,7 @@
                                                         <br>
                                                         <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 200</span>
                                                         <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button">Book</button>
+                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -291,17 +295,39 @@
                                                         <br>
                                                         <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 850</span>
                                                         <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button">Book</button>
+                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
+
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                 </div>
                             </div><br>
+                                <div class="modal" id="bookingModal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Booking Request</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- You can customize the content of the modal here -->
+                                            <p>Modal content goes here.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Submit Booking</button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             
             <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
                 <div class="container">
@@ -347,7 +373,29 @@
                 $('.venue-list .carousel img').click(function(){
                     viewer_modal($(this).attr('src'))
                 })
+                $('.book-venue').click(function () {
+                    // Set the modal content dynamically based on the venue details
+                    var venueName = $(this).closest('.card-body').find('h3').text();
+                    var venueLocation = $(this).closest('.card-body').find('small').text();
+                    
+                    // You can customize the modal content here
+                    var modalContent = `<p>Booking request for <strong>${venueName}</strong> located at <em>${venueLocation}</em>.</p>`;
+
+                    // Set the modal content
+                    $('#bookingModal .modal-body').html(modalContent);
+
+                    // Show the modal
+                    $('#bookingModal').modal('show');
+                });
+
+                $('.venue-list .carousel img').click(function () {
+                    // You can implement your image viewer logic here
+                });
 
             </script>
+
+            <script>
+</script>
+
   </body>
 </html>
