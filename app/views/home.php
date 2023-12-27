@@ -19,14 +19,10 @@
 
     <style>
       header.masthead {
-		    background: url("homebg.jpg");
+		    background-image: url("public/homebg.jpg");;
 		    background-repeat: no-repeat;
 		    background-size: cover;
 		  }
-
-      body {
-        background-image: url('/public/homebg.jpg');
-      }
 
       footer {
         background: #000000e6 !important;

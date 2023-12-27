@@ -35,7 +35,7 @@
         }
 
         body {
-            background-image: url('public/homebg.jpg');
+            background: gray;
         }
 
         .venue-list{
@@ -105,7 +105,7 @@
         <header class="masthead">
         </header>
             <div class="container-fluid mt-3 pt-2">
-                <h4 class="text-center text-black">List of Our Venues for Events</h4>
+                <h4 class="text-center text-white">List of Our Venues for Events</h4>
                 <hr class="divider">
                 <div class="row-items">
                     <div class="col-lg-12">
