@@ -6,7 +6,7 @@ class Reservation_model extends Model {
         $this->db->table('venue_booking')->get_all();
     }
 
-    public function save($name, $address, $email, $contact, $venue_id, $duration, $status)
+    public function booksave($name, $address, $email, $contact, $venue_id, $duration, $status)
     {
         $data = array(
                 'name'=> $name,
