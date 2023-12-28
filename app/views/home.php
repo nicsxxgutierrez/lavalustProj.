@@ -86,7 +86,7 @@
                     </div>
                     <div class="col-lg-4 mr-auto text-center">
                         <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-                        <a class="d-block" href="mailto:event@gmail.com">event@gmail.com</a>
+                        <a class="d-block" href="mailto:eventparadise@gmail.com">eventparadise@gmail.com</a>
                     </div>
                 </div>
             </div>
