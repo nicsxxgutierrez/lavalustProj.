@@ -77,7 +77,8 @@
         <section class="page-section">
             <div class="container justify-content-center">      
                 <p>An Event Management System is a tool to assist organizers with the planning, execution, and management of their events. It helps event managers and organizers plan, execute and report on events, driving success for their business.
-                We are able to facilitate our guests' search for locations for events such as birthdays, weddings, and parties with the use of this system.</p>
+                We are able to facilitate our guests' search for locations for events such as birthdays, weddings, and parties with the use of this system.
+                We can help our guest to find affordable venues to conduct social gatherings.</p>
             </div>
         </section>
 
