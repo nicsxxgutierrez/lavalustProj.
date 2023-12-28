@@ -5,9 +5,6 @@ class Reservation_model extends Model {
 	public function findAll(){
         $this->db->table('venue_booking')->get_all();
     }
-    public function getbooked(){
-        return $this->db->table('venue_booking')->get_all();
-    }
 
     public function booksave($name, $address, $email, $contact, $venue_id, $duration, $status)
     {
@@ -21,5 +18,8 @@ class Reservation_model extends Model {
         );
        return $this->db->table('venue_booking')->insert($data);
     }
+
+    
+
 }
 ?>
