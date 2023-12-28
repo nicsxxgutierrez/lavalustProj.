@@ -318,29 +318,31 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="">
-                            <label for="fname">Full Name</label><br>
-                            <input type="text" id="fname" name="fname" placeholder="Enter your Full Name"><br>
+                        <form action="<?=site_url('booksave')?>" method="post">
+                            <label for="name">Full Name</label><br>
+                            <input type="text" id="name" name="name" placeholder="Enter your Full Name"><br>
 
-                            <label for="fname">Address</label><br>
-                            <textarea type="text" id="fname" name="fname" placeholder="Enter your Address"></textarea><br>
+                            <label for="address">Address</label><br>
+                            <textarea type="text" id="address" name="address" placeholder="Enter your Address"></textarea><br>
                             
-                            <label for="fname">Email</label><br>
-                            <input type="text" id="fname" name="fname" placeholder="Enter your Email"><br>
+                            <label for="email">Email</label><br>
+                            <input type="text" id="email" name="email" placeholder="Enter your Email"><br>
 
-                            <label for="fname">Contact</label><br>
-                            <input type="text" id="fname" name="fname" placeholder="Enter your contact number"><br>
+                            <label for="contact">Contact</label><br>
+                            <input type="text" id="contact" name="contact" placeholder="Enter your contact number"><br>
 
-                            <label for="fname">Duration</label><br>
-                            <input type="text" id="fname" name="fname" placeholder="Enter how many days you will stay"><br>
+                            <label for="duration">Duration</label><br>
+                            <input type="text" id="duration" name="duration" placeholder="Enter how many days you will stay"><br>
 
-                            <label for="fname">Desired Event Schedule</label><br>
+                            <label for="schedule">Desired Event Schedule</label><br>
                             <input type="datetime-local" id="Test_DatetimeLocal">
+
+                            <input type="submit" value="Submit Booking" class="btn btn-primary" ></input>
                         </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Submit Booking</button>
+                        
                     </div>
                     </div>
                 </div>

@@ -45,7 +45,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 */
 
 $router->get('/', 'Welcome::index');
-$router->post('/save', 'ReservationController::save');
+$router->post('/booksave', 'ReservationController::booksave');
 $router->get('/reservation', 'ReservationController::getdata');
 $router->match('/registerauth', 'UserController::registerAuth', 'GET|POST');
 
