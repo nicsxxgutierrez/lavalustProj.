@@ -71,3 +71,6 @@ $router->get('/adminaudience_report', 'AdminController::audience_report');
 $router->get('/adminvenue_report', 'AdminController::venue_report');
 $router->get('/adminusers', 'AdminController::users');
 $router->get('/adminsite_settings', 'AdminController::site_set');
+
+
+$router->get('/venue_booklist', 'Home::venue_booklist');

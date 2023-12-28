@@ -69,12 +69,14 @@
                                     </thead>
                                     <tbody>
                                         <tr>
+                                            <?php foreach ($venuebooked as $abook): ?>
                                             <td class="text-center"></td>
                                             <td class="">
-                                                <p>Venue: <b></b></p>
-                                                <p><small>Schedule: <b></b></small></p>
-                                                <p><small>Duration:</small></p>
+                                                <p>Venue: <?= $abook['venue'] ?><b></b></p>
+                                                <p><small>Schedule: <?= $abook['duration'] ?> <b></b></small></p>
+                                                <p><small>Duration: <?= $abook['datetime'] ?></small></p>
                                             </td>
+                                            <?php endforeach ?>
                                             <td class="">
                                             <p>Booked by:</b></p>
                                             <p><small>Email:</b></small></p>
