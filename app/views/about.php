@@ -30,7 +30,7 @@
     }
 
     footer {
-        background: #000000e6 !important;
+        background: black !important;
         position: relative;
         height: 350px;
         width: 100%;
@@ -42,7 +42,7 @@
         width: 100%;
         color: #fff;
         line-height: 40px;
-        font-size: 1.5em;
+        font-size: 1em;
         text-align: center;
         bottom: 0;
     }

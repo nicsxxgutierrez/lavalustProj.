@@ -25,7 +25,7 @@
 		  }
 
       footer {
-        background: #000000e6 !important;
+        background: black !important;
         position: relative;
         height: 350px;
         width: 100%;

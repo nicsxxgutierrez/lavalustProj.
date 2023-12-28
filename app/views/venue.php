@@ -82,14 +82,17 @@
             right:0;
         }
         
+        .card.venue-list{
+            margin-bottom: 20px;
+        }
+
         .venue-text{
             justify-content: center;
             align-items: center ;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
+        img{
+            max-width: 60vh;
         }
 
         footer {
@@ -121,30 +124,36 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Uncle Jov's"></div>
-                                        <div class="card-body">
-                                            <div class="row align-items-center justify-content-center text-center h-100">
-                                                <div class="">
-                                                    <div>
-                                                        <h3><b class="filter-txt">Uncle Jov's</b></h3>
-                                                        <small><i>Roxas Dr 5200 Calapan Oriental Mindoro</i></small>
-                                                    </div>
-                                                    <div>
-                                                        <span class="truncate" style="font-size: inherit;"><small>Uncle Jov's is famous for their burgers, this place is perfect for Celebrating Parties and hanging out with family and friends.</small></span>
-                                                        <br>
-                                                        <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 300</span>
-                                                        <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
-                                                    </div>
+                                    <div id="images">
+                                        <img src="public/venuepics/uncle_jovs.png" alt="Uncle Jov's">
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row align-items-center justify-content-center text-center h-100">
+                                            <div class="">
+                                                <div>
+                                                    <h3><b class="filter-txt">Uncle Jov's</b></h3>
+                                                    <small><i>Roxas Dr 5200 Calapan Oriental Mindoro</i></small>
+                                                </div>
+                                                <div>
+                                                    <span class="truncate" style="font-size: inherit;">
+                                                        <small>Uncle Jov's is famous for their burgers, this place is perfect for Celebrating Parties and hanging out with family and friends.</small>
+                                                    </span>
+                                                    <br>
+                                                    <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 300</span>
+                                                    <br><br>
+                                                    <button class="btn btn-primary book-venue align-self-end" type="button" id="bookButton" data-toggle="modal" data-target="#bookingModal">Book</button>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
                                 </div>
                             </div><br>
 
-                            <div class="col-md-6">
-                                <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Halcon's"></div>
+                                <div class="col-md-6">
+                                    <div class="card venue-list">
+                                        <div id="images">
+                                            <img src="public/venuepics/halcon.jpg" alt="Halcon's">
+                                        </div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
@@ -165,9 +174,11 @@
                                 </div>
                             </div><br>
 
-                            <div class="col-md-6">
-                                <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Orange Dutch Cafe"></div>
+                                <div class="col-md-6">
+                                    <div class="card venue-list">
+                                        <div id="images">
+                                            <img src="public/venuepics/dutch_cafe.png" alt="Orange Dutch Cafe">
+                                        </div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
@@ -188,20 +199,22 @@
                                 </div>
                             </div><br>
 
-                            <div class="col-md-6">
-                                <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Blossom's"></div>
+                                <div class="col-md-6">
+                                    <div class="card venue-list">
+                                        <div id="images">
+                                            <img src="public/venuepics/riceland.jpg" alt="Riceland Inn">
+                                        </div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
                                                     <div>
-                                                        <h3><b class="filter-txt">Blossom Food Delight</b></h3>
-                                                        <small><i>J.P. Rizal Street, San Vicente North Mimaropa</i></small>
+                                                        <h3><b class="filter-txt">Riceland Inn II Hotel</b></h3>
+                                                        <small><i>M.H. Del Pilar Street, Sto. Nino 5200 Calapan Oriental Mindoro </i></small>
                                                     </div>
                                                     <div>
                                                         <span class="truncate" style="font-size: inherit;"><small>Private Parties, Weddings, Birthday party, with limited participants.</small></span>
                                                         <br>
-                                                        <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 500</span>
+                                                        <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 700</span>
                                                         <br><br>
                                                         <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
                                                     </div>
@@ -211,9 +224,11 @@
                                 </div>
                             </div><br>
 
-                            <div class="col-md-6">
-                                <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Cafe Meow"></div>
+                                <div class="col-md-6">
+                                    <div class="card venue-list">
+                                        <div id="images">
+                                            <img src="public/venuepics/cafe_meow.png" alt="Cafe Meow">
+                                        </div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
@@ -234,9 +249,11 @@
                                 </div>
                             </div><br>
 
-                            <div class="col-md-6">
-                                <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Tagpuan Bistro"></div>
+                                <div class="col-md-6">
+                                    <div class="card venue-list">
+                                        <div id="images">
+                                            <img src="public/venuepics/tagpuan_bistro.jpg" alt="Tagpuan Bistro">
+                                        </div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
@@ -257,9 +274,11 @@
                                 </div>
                             </div><br>
 
-                            <div class="col-md-6">
-                                <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Shakey's Pizza Parlor"></div>
+                                <div class="col-md-6">
+                                    <div class="card venue-list">
+                                        <div id="images">
+                                            <img src="public/venuepics/shakeys.png" alt="Shakey's">
+                                        </div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
@@ -280,9 +299,11 @@
                                 </div>
                             </div><br>
 
-                            <div class="col-md-6">
-                                <div class="card venue-list">
-                                    <div id="imagesCarousel_card-img-top" class="carousel slide" data-ride="carousel"><img src="public/venuepics/ujwallpaper.png" alt="Filipiniana Hotel"></div>
+                                <div class="col-md-6">
+                                    <div class="card venue-list">
+                                        <div id="images">
+                                            <img src="public/venuepics/filipiniana.png" alt="Filipiniana Hotel">
+                                        </div>
                                         <div class="card-body">
                                             <div class="row align-items-center justify-content-center text-center h-100">
                                                 <div class="">
