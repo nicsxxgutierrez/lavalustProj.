@@ -340,8 +340,8 @@
                     </div>
                     <div class="modal-body">
                         <form action="<?=site_url('booksave')?>" method="post">
-                            <label for="name">Full Name</label><br>
-                            <input type="text" id="name" name="name" placeholder="Enter your Full Name"><br>
+                            <label for="fullname">Full Name</label><br>
+                            <input type="text" id="fullname" name="fullname" placeholder="Enter your Full Name"><br>
 
                             <label for="address">Address</label><br>
                             <textarea type="text" id="address" name="address" placeholder="Enter your Address"></textarea><br>

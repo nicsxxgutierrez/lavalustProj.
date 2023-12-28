@@ -6,16 +6,14 @@ class Reservation_model extends Model {
         $this->db->table('venue_booking')->get_all();
     }
 
-    public function booksave($name, $address, $email, $contact, $venue_id, $duration, $status)
+    public function booksave($fullname, $address, $email, $contact, $duration)
     {
         $data = array(
-                'name'=> $name,
+                'fullname'=> $fullname,
                 'address' => $address,
                 'email' => $email,
                 'contact' => $contact,
-                'venue_id' => $venue_id,
-                'duration' => $duration,
-                'status' => $status
+                'duration' => $duration
         );
        return $this->db->table('venue_booking')->insert($data);
     }

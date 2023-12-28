@@ -15,7 +15,7 @@ class ReservationController extends Controller {
     public function booksave(){
 		if($this->form_validation->submitted()){
             $this->form_validation
-                ->name('name')->required()
+                ->name('fullname')->required()
                 ->min_length(2)
                 ->name('address')->required()
                 ->min_length(2)
@@ -23,24 +23,18 @@ class ReservationController extends Controller {
                 ->min_length(2)
                 ->name('contact')->required()
                 ->min_length(2)
-                ->name('venue_id')->required()
-                ->min_length(2)
                 ->name('duration')->required()
-                ->min_length(2)
-                ->name('status')->required()
                 ->min_length(2);
             if($this->form_validation->run())
             {
-                if($this->Dashboard_model->booksave(
-                    $this->io->post('name'),
+                if($this->Reservation_model->booksave(
+                    $this->io->post('fullname'),
                     $this->io->post('address'),
                     $this->io->post('email'),
                     $this->io->post('contact'),
-                    $this->io->post('venue_id'),
-                    $this->io->post('duration'),
-                    $this->io->post('status')))
+                    $this->io->post('duration')))
                 {
-                    redirect('booksave');
+                    redirect('venue');
                 } 
                 else
                 {
