@@ -340,6 +340,9 @@
                     </div>
                     <div class="modal-body">
                         <form action="<?=site_url('booksave')?>" method="post">
+                            <label for="venue">Venue</label><br>
+                            <input type="text" id="venue" name="venue" placeholder="Enter Venue"><br>
+
                             <label for="fullname">Full Name</label><br>
                             <input type="text" id="fullname" name="fullname" placeholder="Enter your Full Name"><br>
 
