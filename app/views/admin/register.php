@@ -60,7 +60,7 @@
         height: calc(100%);
         background: #000000e0;
     }
-	.btn {
+    .btn {
         background-color: blue;
         color: #fff;
         padding: 10px 15px;
@@ -91,9 +91,13 @@
   		<div id="login-left"></div><div id="login-right">
   			<div class="card col-md-8">
   				<div class="card-body">
-                    <form action="adminlogin" method="post">
+                    <form action="adminregister" method="post">
 						<h1>Welcome Admin!</h1>
 						<hr>
+                        <div class="form-group">
+  							<label for="name" class="control-label">Name</label>
+  							<input type="text" id="name" name="name" class="form-control">
+  						</div>
   						<div class="form-group">
   							<label for="username" class="control-label">Username</label>
   							<input type="text" id="username" name="username" class="form-control">
@@ -102,13 +106,15 @@
   							<label for="password" class="control-label">Password</label>
   							<input type="password" id="password" name="password" class="form-control">
   						</div>
-  						<center><button type="submit" class="btn" name="submit">Log in</button><br><br>
-                                <p>Don't have an account yet admin?<a href="adminuserregister"> SignUp</a></p></center>
+  						<center><button type="submit" class="btn" name="submit">Register</button>
+                                <p>Already have an account? <a href="adminuserlogin">Login</a></p>
+                                <p><a href="adminuserlogin">Back</a></p></center>
   					</form>
   				</div>
   			</div>
   		</div>
     </main>
     <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
 </body>
 </html>

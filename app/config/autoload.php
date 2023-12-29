@@ -92,5 +92,5 @@ $autoload['helpers'] = array("url", 'file');
 |
 |	$autoload['model'] = array('model1_model', 'model2_model')
 */
-$autoload['models'] = array('User_model');
+$autoload['models'] = array('User_model', 'Venue_model');
 ?>

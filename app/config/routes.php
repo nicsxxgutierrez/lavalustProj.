@@ -61,10 +61,12 @@ $router->get('logout', 'UserController::logout');
 
 /*  For Adminside */
 $router->post('/adminregister', 'AdminController::register');
+$router->match('/adminuserregister', 'AdminController::registerview', 'GET|POST');
 $router->post('/adminlogin', 'AdminController::login');
 $router->get('/adminuserlogin', 'AdminController::loginview');
 $router->get('/adminhome', 'AdminController::home');
 $router->get('/adminvenue_book', 'AdminController::venue');
+$router->get('/admineditvenue', 'AdminController::editvenue');
 $router->get('/adminevent', 'AdminController::event');
 $router->get('/adminvenues', 'AdminController::venues');
 $router->get('/adminaudience_report', 'AdminController::audience_report');
