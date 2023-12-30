@@ -152,19 +152,6 @@
                 </div>
             </div>
 
-            <div class="toast" id="alert_toast" role="alert" aria-live="assertive" aria-atomic="true">
-                <div class="toast-body text-white"></div>
-            </div>
-            <header class="masthead">
-                    <div class="container-fluid h-100">
-                        <div class="row h-100 align-items-center justify-content-center text-center">
-                            <div class="col-lg-8 align-self-end mb-4 page-title">
-                                <h3 class="text-white">Welcome to Event Management System</h3>    
-                                <hr class="divider my-4" />                  
-                            </div>
-                        </div>
-                    </div>
-                </header>
                 <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
                     <div class="container">
                         <a class="navbar-brand js-scroll-trigger" href="./">Event Management System</a>

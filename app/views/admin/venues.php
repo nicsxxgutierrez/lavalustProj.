@@ -51,9 +51,6 @@
                         <div class="card">
                             <div class="card-header">
                                 <b>List of Venue</b>
-                                <span class="float:right"><a class="btn btn-primary btn-block btn-sm col-sm-2 float-right" href="index.php?page=manage_venue" id="new_venue">
-                                    <i class="fa fa-plus"></i> New Entry</a>
-                                </span>
                             </div>
                             <div class="card-body">
                                 <table class="table table-condensed table-bordered table-hover">
@@ -68,26 +65,27 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php foreach ($venues as $v): ?>
                                         <tr>
-                                            <td class="text-center"></td>
-                                            
+                                            <td><?= $v['id'] ?></td>
                                             <td class="">
-                                                <p> <b></b></p>
+                                                <p>Venue: <?= $v['venue'] ?><b></b></p>
                                             </td>
                                             <td class="">
-                                                <p class=""></p>
+                                                <p>Address: <?= $v['address'] ?></b></p>
                                             </td>
                                             <td class="">
-                                                <p class="truncate"></p>
+                                                <p>Description: <?= $v['description'] ?></b></p>
                                             </td>
                                             <td class="">
-                                                <p class="text-right"></p>
+                                                <p>Rate: <?= $v['rate'] ?></b></p>
                                             </td>
                                             <td class="text-center">
-                                                <button class="btn btn-sm btn-outline-primary edit_venue" type="button">Edit</button>
-                                                <button class="btn btn-sm btn-outline-danger delete_venue" type="button">Delete</button>
+                                                <a href="<?= site_url('/updateBooking/' .$v['id'])?>" class =" btn btn-primary">Edit</a>
+                                                <a href="<?= site_url('/deleteBooking/' .$v['id'])?>" class =" btn btn-danger">Delete</a>
                                             </td>
-                                        </tr>   
+                                        </tr>
+                                        <?php endforeach ?>
                                     </tbody>
 						        </table>
 					        </div>
@@ -96,37 +94,5 @@
 		        </div>
             </div>
         </main>
-
-        <script>
-            $(document).ready(function(){
-                $('table').dataTable()
-            })
-            $('.edit_venue').click(function(){
-                location.href ="index.php?page=manage_venue&id="+$(this).attr('data-id')
-                
-            })
-            $('.delete_venue').click(function(){
-                _conf("Are you sure to delete this venue?","delete_venue",[$(this).attr('data-id')])
-            })
-            
-            function delete_venue($id){
-                stvenue_load()
-                $.ajax({
-                    url:'ajax.php?action=delete_venue',
-                    method:'POST',
-                    data:{id:$id},
-                    success:function(resp){
-                        if(resp==1){
-                            alert_toast("Data successfully deleted",'success')
-                            setTimeout(function(){
-                                location.reload()
-                            },1500)
-
-                        }
-                    }
-                })
-            }
-        </script>
-
 </body>
 </html>

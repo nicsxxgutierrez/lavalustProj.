@@ -1,7 +1,8 @@
 <?php
 defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 
-class Venue_model extends Model {
+class Venue_model extends Model 
+{
 
     public function get_venue()
     {
@@ -28,7 +29,8 @@ class Venue_model extends Model {
         return $data;
     }
 
-    public function updateBooking($id, $fullname, $address, $email, $contact, $datetime, $status){
+    public function updateBooking($id, $fullname, $address, $email, $contact, $datetime, $status)
+    {
         $data = array(
         'fullname' => $fullname,
         'address'=>$address,
@@ -38,17 +40,27 @@ class Venue_model extends Model {
         'status' =>$status);
          
         return $this->db->table('venue_booking')->where(array('id' => $id))->update($data);
+     
+    }
          
-        }
-         
-        public function get_booking($id)
-        {
-            return $this->db->table('venue_booking')->where('id', $id)->get();
-        }
+    public function get_booking($id)
+    {
+        return $this->db->table('venue_booking')->where('id', $id)->get();
+    }
 
-        public function deleteBooking($id)
-        {
-            return $this->db->table('venue_booking')->where(array('id' => $id))->delete();
-        }
+    public function deleteBooking($id)
+    {
+        return $this->db->table('venue_booking')->where(array('id' => $id))->delete();
+    }
+
+    public function get_venues()
+    {
+         return $this->db->table('venue')->get_all();
+    }
+
+    public function get_users()
+    {
+        return $this->db->table('users')->get_all();
+    }
 }
 ?>

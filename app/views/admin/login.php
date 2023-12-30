@@ -91,7 +91,7 @@
   		<div id="login-left"></div><div id="login-right">
   			<div class="card col-md-8">
   				<div class="card-body">
-                    <form action="adminlogin" method="post">
+                    <form action="<?= site_url('adminuserlogin')?>" method="post">
 						<h1>Welcome Admin!</h1>
 						<hr>
   						<div class="form-group">
@@ -103,7 +103,7 @@
   							<input type="password" id="password" name="password" class="form-control">
   						</div>
   						<center><button type="submit" class="btn" name="submit">Log in</button><br><br>
-                                <p>Don't have an account yet admin?<a href="adminuserregister"> SignUp</a></p></center>
+                                <p>Don't have an account yet admin?<a href="adminregister"> SignUp</a></p></center>
   					</form>
   				</div>
   			</div>

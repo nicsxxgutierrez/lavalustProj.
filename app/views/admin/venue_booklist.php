@@ -83,7 +83,7 @@
                                                     <span class="badge badge-primary"><?= $abook['status'] ?></span>
                                             </td>
                                             <td class="text-center">
-                                                <a href="<?= site_url('/updateBooking/' .$abook['id'])?>" class =" btn btn-primary">Edit</a>
+                                                <a href="<?= site_url('/updateBooking/' .$abook['id'])?>" class =" btn btn-primary">Edit</a>|
                                                 <a href="<?= site_url('/deleteBooking/' .$abook['id'])?>" class =" btn btn-danger">Delete</a>
                                             </td>
                                         </tr>

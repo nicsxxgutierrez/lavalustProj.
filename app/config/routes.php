@@ -62,19 +62,17 @@ $router->get('about', 'UserController::about');
 $router->get('logout', 'UserController::logout');
 
 /*  For Adminside */
-$router->post('/adminregister', 'AdminController::register');
-$router->match('/adminuserregister', 'AdminController::registerview', 'GET|POST');
-$router->post('/adminlogin', 'AdminController::login');
-$router->get('/adminuserlogin', 'AdminController::loginview');
+$router->get('/adminregister', 'AdminController::registerview');
+$router->match('/adminuserregister', 'AdminController::adminregister', 'GET|POST');
+$router->post('/adminuserlogin', 'AdminController::adminlogin');
+$router->get('/adminlogin', 'AdminController::loginview');
 $router->get('/adminhome', 'AdminController::home');
 $router->get('/adminvenue_book', 'AdminController::venue');
 $router->get('/admineditvenue', 'AdminController::editvenue');
-$router->get('/adminevent', 'AdminController::event');
 $router->get('/adminvenues', 'AdminController::venues');
 $router->get('/adminaudience_report', 'AdminController::audience_report');
 $router->get('/adminvenue_report', 'AdminController::venue_report');
 $router->get('/adminusers', 'AdminController::users');
-$router->get('/adminsite_settings', 'AdminController::site_set');
 $router->get('/updateBooking/(:any)', 'AdminController::booking');
 $router->match('/update', 'AdminController::updateBooking', 'GET|POST');
 $router->get('/deleteBooking/(:any)', 'AdminController::deleteBooking');

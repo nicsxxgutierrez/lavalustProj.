@@ -116,7 +116,7 @@
                         <div class=" dropdown mr-4">
                             <a href="#" class="text-white dropdown-toggle"  id="account_settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administrator </a>
                                 <div class="dropdown-menu" aria-labelledby="account_settings" style="left: -2.5em;">
-                                    <a class="dropdown-item" href="adminuserlogin"><i class="fa fa-power-off"></i> Logout</a>
+                                    <a class="dropdown-item" href="adminlogin"><i class="fa fa-power-off"></i> Logout</a>
                                 </div>
             </div>
         </nav>

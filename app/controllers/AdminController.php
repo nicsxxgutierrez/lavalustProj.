@@ -4,35 +4,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 require 'app/config/autoload.php';
 
 class AdminController extends Controller 
-{
-
-        public function register(){
-            if($this->form_validation->submitted()){
-                $this->form_validation
-                ->name('name')->required()
-                ->min_length('2')
-                ->name('username')->required()
-                ->min_length('4')
-                ->name('password')->required()
-                ->min_length('6');
-                if($this->form_validation->run())
-                {
-                    if($this->Admin_model->register($this->io->post('name'), $this->io->post('username'), password_hash($this->io->post('password'), PASSWORD_DEFAULT))){
-                        $this->session->set_flashdata(array('type'=> 'Data was Successfully Added'));
-
-                        $this->call->view('admin/login');
-                    }   
-                    else{
-                        $this->form_validation->errors();
-                    
-                    }
-                }
-                else{
-                    return redirect('admin/register');
-                }
-            }
-        }	
-
+{	
         public function registerview(){
             $this->call->view('admin/register');
         }
@@ -105,7 +77,6 @@ class AdminController extends Controller
                 redirect('/adminvenue_book');
             }
         }
-        
 
         public function booking($id)
         {
@@ -117,12 +88,9 @@ class AdminController extends Controller
             $this->call->view('/admin/edit_venue');
         }
 
-        public function event(){
-            $this->call->view('/admin/event_audiencelist');
-        }
-
         public function venues(){
-            $this->call->view('/admin/venues');
+            $data['venues'] = $this->Venue_model->get_venues();
+            $this->call->view('/admin/venues', $data);
         }
 
         public function audience_report(){
@@ -134,12 +102,55 @@ class AdminController extends Controller
         }
 
         public function users(){
-            $this->call->view('/admin/users');
+            $data['user'] = $this->Venue_model->get_users();
+            $this->call->view('/admin/users', $data);
         }
 
-        public function site_set(){
-            $this->call->view('/admin/site_settings');
+        public function adminregister(){
+            $this->form_validation
+            ->name('name')->required()
+            ->name('username')->required()
+            ->name('password')->required()
+            ->name('type')->required();
+            $name = $this->io->post('name');
+            $username = $this->io->post('username');
+            $password = $this->io->post('password');
+            $type = $this->io->post('type');
+            if($this->form_validation->run()){
+
+                if($this->User_model->adminregister($name, $username, password_hash($this->io->post('password'), PASSWORD_DEFAULT), $type))
+                {
+                    redirect('/adminlogin');
+                } 
+                else
+                {
+                $this->form_validation->errors();
+                }
+            }
         }
 
+        public function adminlogin(){
+            $username = $this->io->post('username');
+            $password = $this->io->post('password');
+    
+            $data = [
+                'username' => $username,
+                'password' => $password
+            ];
+    
+            $user = $this->User_model->get_user_by_username($username);
+    
+            if(is_null($user)) {
+                $this->call->view('admin/login');
+            }
+    
+            if($password !== $user['password']) {
+                $this->call->view('admin/home');
+            }
+            else{
+                redirect('/adminhome');
+            }
+           
+        }
     }
 ?>
