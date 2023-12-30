@@ -24,7 +24,9 @@ class UserController extends Controller {
     
     public function venue(){
         $this->call->model('Venue_model');
-        $this->call->view('venue');
+        $data['venuebk'] =$this->Venue_model->get_venue();
+        $data['venue'] = $this->Venue_model->get_venue();
+        $this->call->view('venue', $data);
     }
 
     public function about(){

@@ -15,6 +15,8 @@ class ReservationController extends Controller {
     public function booksave(){
 		if($this->form_validation->submitted()){
             $this->form_validation
+                ->name('venue')->required()
+                ->min_length(2)
                 ->name('fullname')->required()
                 ->min_length(2)
                 ->name('address')->required()
@@ -24,15 +26,21 @@ class ReservationController extends Controller {
                 ->name('contact')->required()
                 ->min_length(2)
                 ->name('duration')->required()
-                ->min_length(2);
+                ->min_length(2)
+                ->name('datetime')->required()
+                ->min_length(2)
+                ->name('status')->required();
             if($this->form_validation->run())
             {
                 if($this->Reservation_model->booksave(
+                    $this->io->post('venue'),
                     $this->io->post('fullname'),
                     $this->io->post('address'),
                     $this->io->post('email'),
                     $this->io->post('contact'),
-                    $this->io->post('duration')))
+                    $this->io->post('duration'),
+                    $this->io->post('datetime'),
+                    $this->io->post('status')))
                 {
                     redirect('venue');
                 } 
@@ -46,11 +54,17 @@ class ReservationController extends Controller {
         $this->call->view('admin/allbooks', $data); 
 	}
 
-    public function getdata(){
-       $data['venue'] = $this->Venue_model->getVenue();
-        
-       return $this->call->view('reservation/reservation', $data);
-        
+    public function get_venue($id)
+    {
+        $data['get'] = $this->Reservation_model->get_venue($id);
+        return $this->call->view('venue_booking', $data);
+    }
+
+    public function get_data()
+    {
+        $data['venue'] = $this->Venue_model->get_venue();
+        $data['venuebk'] =$this->Venue_model->get_venue();
+        return $this->call->view('venue', $data);
     }
 }
 ?>

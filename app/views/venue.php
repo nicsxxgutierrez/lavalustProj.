@@ -122,269 +122,35 @@
                 <div class="row-items">
                     <div class="col-lg-12">
                         <div class="row">
+                            <?php foreach( $venue as $venue):?>
                             <div class="col-md-6">
                                 <div class="card venue-list">
-                                    <div id="images">
-                                        <img src="public/venuepics/uncle_jovs.png" alt="Uncle Jov's">
+                                    <div id="images"> 
+                                        <img src="public/venuepics/<?= $venue['file_image']?>" alt="pictures">
                                     </div>
                                     <div class="card-body">
-                                        <div class="row align-items-center justify-content-center text-center h-100">
+                                        <div class="row align-items-center justify-content-center text-center h-100"> 
                                             <div class="">
-                                                <div>
-                                                    <h3><b class="filter-txt">Uncle Jov's</b></h3>
-                                                    <small><i>Roxas Dr 5200 Calapan Oriental Mindoro</i></small>
+                                                <div> 
+                                                    <h3><b class="filter-txt"><?= $venue['venue']?></b></h3>
+                                                    <small><i><?= $venue['address']?></i></small> 
                                                 </div>
-                                                <div>
-                                                    <span class="truncate" style="font-size: inherit;">
-                                                        <small>Uncle Jov's is famous for their burgers, this place is perfect for Celebrating Parties and hanging out with family and friends.</small>
-                                                    </span>
-                                                    <br>
-                                                    <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 300</span>
-                                                    <br><br>
-                                                    <button class="btn btn-primary book-venue align-self-end" type="button" id="bookButton" data-toggle="modal" data-target="#bookingModal">Book</button>
+                                                <div> 
+                                                    <span class="truncate" style="font-size: inherit;"><small><?= $venue['description']?></small></span><br>
+                                                    <span class="badge badge-secondary">
+                                                    <i class="fa fa-tag"></i> Rate Per Hour: <?= $venue['rate']?></span><br><br> 
+                                                    <a href="<?= site_url('/bookVenue/' . $venue['id'])?>" class =" btn btn-primary">Book Now</a>
                                                 </div>
-                                            </div>
-                                        </div>
+                                            </div> 
+                                        </div> 
                                     </div>
                                 </div>
-                            </div><br>
-
-                                <div class="col-md-6">
-                                    <div class="card venue-list">
-                                        <div id="images">
-                                            <img src="public/venuepics/halcon.jpg" alt="Halcon's">
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row align-items-center justify-content-center text-center h-100">
-                                                <div class="">
-                                                    <div>
-                                                        <h3><b class="filter-txt">Halcon's Bar and Resto</b></h3>
-                                                        <small><i>Filipiniana Complex, Sto. Niño 5200 Calapan City, Oriental Mindoro</i></small>
-                                                    </div>
-                                                    <div>
-                                                        <span class="truncate" style="font-size: inherit;"><small>Best choice for Birthday Party, Wedding, and other Occations.</small></span>
-                                                        <br>
-                                                        <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 250</span>
-                                                        <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                </div>
-                            </div><br>
-
-                                <div class="col-md-6">
-                                    <div class="card venue-list">
-                                        <div id="images">
-                                            <img src="public/venuepics/dutch_cafe.png" alt="Orange Dutch Cafe">
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row align-items-center justify-content-center text-center h-100">
-                                                <div class="">
-                                                    <div>
-                                                        <h3><b class="filter-txt">Orange Dutch Cafe</b></h3>
-                                                        <small><i>J.P Rizal Street, 5200, Calapan City, Oriental Mindoro</i></small>
-                                                    </div>
-                                                    <div>
-                                                        <span class="truncate" style="font-size: inherit;"><small>Private Birthday Party, Wedding and other Occations with family and some guests.</small></span>
-                                                        <br>
-                                                        <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 280</span>
-                                                        <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                </div>
-                            </div><br>
-
-                                <div class="col-md-6">
-                                    <div class="card venue-list">
-                                        <div id="images">
-                                            <img src="public/venuepics/riceland.jpg" alt="Riceland Inn">
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row align-items-center justify-content-center text-center h-100">
-                                                <div class="">
-                                                    <div>
-                                                        <h3><b class="filter-txt">Riceland Inn II Hotel</b></h3>
-                                                        <small><i>M.H. Del Pilar Street, Sto. Nino 5200 Calapan Oriental Mindoro </i></small>
-                                                    </div>
-                                                    <div>
-                                                        <span class="truncate" style="font-size: inherit;"><small>Private Parties, Weddings, Birthday party, with limited participants.</small></span>
-                                                        <br>
-                                                        <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 700</span>
-                                                        <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                </div>
-                            </div><br>
-
-                                <div class="col-md-6">
-                                    <div class="card venue-list">
-                                        <div id="images">
-                                            <img src="public/venuepics/cafe_meow.png" alt="Cafe Meow">
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row align-items-center justify-content-center text-center h-100">
-                                                <div class="">
-                                                    <div>
-                                                        <h3><b class="filter-txt">Cafe Meow</b></h3>
-                                                        <small><i>Ilaya, 5200, Calapan City, Oriental Mindoro</i></small>
-                                                    </div>
-                                                    <div>
-                                                        <span class="truncate" style="font-size: inherit;"><small>Birthday parties, Celebrating Occations with selected guest like family, friends, or co-workers.</small></span>
-                                                        <br>
-                                                        <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 250</span>
-                                                        <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                </div>
-                            </div><br>
-
-                                <div class="col-md-6">
-                                    <div class="card venue-list">
-                                        <div id="images">
-                                            <img src="public/venuepics/tagpuan_bistro.jpg" alt="Tagpuan Bistro">
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row align-items-center justify-content-center text-center h-100">
-                                                <div class="">
-                                                    <div>
-                                                        <h3><b class="filter-txt">Tagpuan Bistro</b></h3>
-                                                        <small><i>2f Tomas Montellano Bldg., Gov.Infantado St., Sta. Maria Village , 5200, Calapan City, Oriental Mindoro</i></small>
-                                                    </div>
-                                                    <div>
-                                                        <span class="truncate" style="font-size: inherit;"><small>You can celebrate here with your friends and family.</small></span>
-                                                        <br>
-                                                        <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 150</span>
-                                                        <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                </div>
-                            </div><br>
-
-                                <div class="col-md-6">
-                                    <div class="card venue-list">
-                                        <div id="images">
-                                            <img src="public/venuepics/shakeys.png" alt="Shakey's">
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row align-items-center justify-content-center text-center h-100">
-                                                <div class="">
-                                                    <div>
-                                                        <h3><b class="filter-txt">Shakey's Pizza Parlor</b></h3>
-                                                        <small><i>J.P. Rizal Street, Brgy. Camilmil, Calapan City, Oriental Mindoro</i></small>
-                                                    </div>
-                                                    <div>
-                                                        <span class="truncate" style="font-size: inherit;"><small>Perfect place to conduct any social gatherings.</small></span>
-                                                        <br>
-                                                        <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 200</span>
-                                                        <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                </div>
-                            </div><br>
-
-                                <div class="col-md-6">
-                                    <div class="card venue-list">
-                                        <div id="images">
-                                            <img src="public/venuepics/filipiniana.png" alt="Filipiniana Hotel">
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row align-items-center justify-content-center text-center h-100">
-                                                <div class="">
-                                                    <div>
-                                                        <h3><b class="filter-txt">Filipiniana Hotel</b></h3>
-                                                        <small><i>M. Roxas St., Brgy Sto. Nino, Calapan City, Oriental Mindoro</i></small>
-                                                    </div>
-                                                    <div>
-                                                        <span class="truncate" style="font-size: inherit;"><small>Perfect place to conduct big social gatherings like wedding or party.</small></span>
-                                                        <br>
-                                                        <span class="badge badge-secondary"><i class="fa fa-tag"></i> Rate Per Hour: 850</span>
-                                                        <br><br>
-                                                        <button class="btn btn-primary book-venue align-self-end" type="button" data-toggle="modal" data-target="#bookingModal">Book</button>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                </div>
-                            </div><br>
+                            </div>
+                            <?php endforeach?>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Modal -->
-            <div class="modal" id="bookingModal" tabindex="-1" role="dialog">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Booking Request</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="<?=site_url('booksave')?>" method="post">
-                            <label for="venue">Venue</label><br>
-                            <input type="text" id="venue" name="venue" placeholder="Enter Venue"><br>
-
-                            <label for="fullname">Full Name</label><br>
-                            <input type="text" id="fullname" name="fullname" placeholder="Enter your Full Name"><br>
-
-                            <label for="address">Address</label><br>
-                            <textarea type="text" id="address" name="address" placeholder="Enter your Address"></textarea><br>
-                            
-                            <label for="email">Email</label><br>
-                            <input type="text" id="email" name="email" placeholder="Enter your Email"><br>
-
-                            <label for="contact">Contact</label><br>
-                            <input type="text" id="contact" name="contact" placeholder="Enter your contact number"><br>
-
-                            <label for="duration">Duration</label><br>
-                            <input type="text" id="duration" name="duration" placeholder="Enter how many days you will stay"><br>
-
-                            <label for="schedule">Desired Event Schedule</label><br>
-                            <input type="datetime-local" id="Test_DatetimeLocal">
-
-                            <input type="submit" value="Submit Booking" class="btn btn-primary" ></input>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-                <div class="container">
-                    <a class="navbar-brand js-scroll-trigger" href="./">Event Management System</a>
-                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                        <div class="collapse navbar-collapse" id="navbarResponsive">
-                        <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="home">Home</a></li>
-                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="venue">Venues</a></li>
-                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="about">About</a></li>
-                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="login">Logout</a></li>                     
-                        </ul>
-                    </div>
-                </div>
-            </nav>
 
             <footer class="py-5">
                 <div class="container">
@@ -416,22 +182,15 @@
                     viewer_modal($(this).attr('src'))
                 })
                 $('.book-venue').click(function () {
-                    // Set the modal content dynamically based on the venue details
                     var venueName = $(this).closest('.card-body').find('h3').text();
                     var venueLocation = $(this).closest('.card-body').find('small').text();
                     
-                    // You can customize the modal content here
                     var modalContent = `<p>Booking request for <strong>${venueName}</strong> located at <em>${venueLocation}</em>.</p>`;
-
-                    // Set the modal content
                     $('#bookingModal .modal-body').html(modalContent);
-
-                    // Show the modal
                     $('#bookingModal').modal('show');
                 });
 
                 $('.venue-list .carousel img').click(function () {
-                    // You can implement your image viewer logic here
                 });
 
             </script>

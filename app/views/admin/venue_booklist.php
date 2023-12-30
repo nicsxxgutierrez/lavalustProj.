@@ -51,10 +51,6 @@
                         <div class="card">
                             <div class="card-header">
                                 <b>Venue Booking List</b>
-                                <span class="">
-                                    <button class="btn btn-primary btn-block btn-sm col-sm-2 float-right" type="button" id="new_book">
-                                    <i class="fa fa-plus"></i> New</button>
-                                </span>
                             </div>
                             <div class="card-body">
                                 <table class="table table-bordered table-condensed table-hover">
@@ -84,13 +80,11 @@
                                             </td>
                                             
                                             <td class="text-center">
-                                                    <span class="badge badge-secondary">For Verification</span>
-                                                    <span class="badge badge-primary">Confirmed</span>
-                                                    <span class="badge badge-danger">Cancelled</span>
+                                                    <span class="badge badge-primary"><?= $abook['status'] ?></span>
                                             </td>
                                             <td class="text-center">
-                                                <button class="btn btn-sm btn-outline-primary edit_book" type="button">Edit</button>
-                                                <button class="btn btn-sm btn-outline-danger delete_book" type="button">Delete</button>
+                                                <a href="<?= site_url('/updateBooking/' .$abook['id'])?>" class =" btn btn-primary">Edit</a>
+                                                <a href="<?= site_url('/deleteBooking/' .$abook['id'])?>" class =" btn btn-danger">Delete</a>
                                             </td>
                                         </tr>
                                         <?php endforeach ?>

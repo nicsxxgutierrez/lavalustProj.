@@ -47,6 +47,8 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 $router->get('/', 'Welcome::index');
 $router->post('/booksave', 'ReservationController::booksave');
 $router->get('/reservation', 'ReservationController::getdata');
+$router->get('/reservationVenue', 'ReservationController::get_data');
+$router->get('/bookVenue/(:any)', 'ReservationController::get_venue');
 $router->match('/registerauth', 'UserController::registerAuth', 'GET|POST');
 
 /*  For Userside */
@@ -73,6 +75,8 @@ $router->get('/adminaudience_report', 'AdminController::audience_report');
 $router->get('/adminvenue_report', 'AdminController::venue_report');
 $router->get('/adminusers', 'AdminController::users');
 $router->get('/adminsite_settings', 'AdminController::site_set');
-
+$router->get('/updateBooking/(:any)', 'AdminController::booking');
+$router->match('/update', 'AdminController::updateBooking', 'GET|POST');
+$router->get('/deleteBooking/(:any)', 'AdminController::deleteBooking');
 
 $router->get('/venue_booklist', 'Home::venue_booklist');

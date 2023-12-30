@@ -116,7 +116,6 @@
                         <div class=" dropdown mr-4">
                             <a href="#" class="text-white dropdown-toggle"  id="account_settings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administrator </a>
                                 <div class="dropdown-menu" aria-labelledby="account_settings" style="left: -2.5em;">
-                                    <a class="dropdown-item" href="javascript:void(0)" id="manage_my_account"><i class="fa fa-cog"></i> Manage Account</a>
                                     <a class="dropdown-item" href="adminuserlogin"><i class="fa fa-power-off"></i> Logout</a>
                                 </div>
             </div>
@@ -126,7 +125,6 @@
             <div class="sidebar-list">
                 <a href="adminhome" class="nav-item nav-home"><span class='icon-field'><i class="fa fa-home"></i></span> Home</a>
                 <a href="adminvenue_book" class="nav-item nav-booking"><span class='icon-field'><i class="fa fa-th-list"></i></span> Venue Book List</a>
-                <a href="adminevent" class="nav-item nav-audience"><span class='icon-field'><i class="fa fa-th-list"></i></span> Event Audience List</a>
                 <a href="adminvenues" class="nav-item nav-venue"><span class='icon-field'><i class="fa fa-map-marked-alt"></i></span> Venues</a>
                 <a class="nav-item nav-reports" data-toggle="collapse" href="#reportCollpase" role="button" aria-expanded="false" aria-controls="reportCollpase"><span class='icon-field'><i class="fa fa-file"></i></span> Reports <i class="fa fa-angle-down float-right"></i></a>
                 <div class="collapse" id="reportCollpase">
@@ -134,7 +132,6 @@
                     <a href="adminvenue_report" class="nav-item nav-venue_report"><span class='icon-field'></span> Venue Report</a>
                 </div>
                 <a href="adminusers" class="nav-item nav-users"><span class='icon-field'><i class="fa fa-users"></i></span> Users</a>
-                <a href="adminsite_settings" class="nav-item nav-site_settings"><span class='icon-field'><i class="fa fa-cogs"></i></span> System Settings</a>
             </div>
         </nav>
 

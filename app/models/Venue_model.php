@@ -2,12 +2,6 @@
 defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 
 class Venue_model extends Model {
-    
-    public $id;
-	public $venue;
-	public $address;
-    public $description;
-	public $rate;
 
     public function get_venue()
     {
@@ -15,13 +9,14 @@ class Venue_model extends Model {
         return $data;
     }
 
-    public function venue($venue, $address, $description, $rate)
+    public function venue($venue, $address, $description, $rate, $file)
     {
         $data = array(
             'venue' => $venue,
             'address' => $address,
             'descrption' => $description,
-            'rate' => $rate
+            'rate' => $rate,
+            'file_image' => $file
         );
         $this->db->table('venue')->select($data)->get_all();
     }
@@ -33,10 +28,8 @@ class Venue_model extends Model {
         return $data;
     }
 
-    public function updateBooking($id, $venue, $fullname, $address, $email, $contact, $datetime, $status){
+    public function updateBooking($id, $fullname, $address, $email, $contact, $datetime, $status){
         $data = array(
-        'Id' => $id,
-        'venue' => $venue,
         'fullname' => $fullname,
         'address'=>$address,
         'email'=>$email,
@@ -50,7 +43,12 @@ class Venue_model extends Model {
          
         public function get_booking($id)
         {
-        return $this->db->table('venue_booking')->where('id', $id)->get();
+            return $this->db->table('venue_booking')->where('id', $id)->get();
+        }
+
+        public function deleteBooking($id)
+        {
+            return $this->db->table('venue_booking')->where(array('id' => $id))->delete();
         }
 }
 ?>

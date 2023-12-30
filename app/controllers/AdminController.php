@@ -70,7 +70,14 @@ class AdminController extends Controller
         }
 
         public function updatebooking(){
-            $venue = $this->io->post('venue');
+            $this->form_validation
+            ->name('fullname')->required()
+            ->name('address')->required()
+            ->name('email')->required()
+            ->name('contact')->required()
+            ->name('duration')->required()
+            ->name('datetime')->required()
+            ->name('status')->required();
             $fullname = $this->io->post('fullname');
             $address = $this->io->post('address');
             $email = $this->io->post('email');
@@ -78,12 +85,32 @@ class AdminController extends Controller
             $duration = $this->io->post('duration');
             $datetime = $this->io->post('datetime');
             $status = $this->io->post('status');
-            $this->Venue_model->updateBooking($venue, $fullname, $address, $email, $contact, $duration, $datetime, $status);
+            if($this->form_validation->run()){
+
+                if($this->Venue_model->updateBooking($fullname, $address, $email, $contact, $duration, $datetime, $status))
+                {
+                    redirect('/adminvenue_book');
+                } 
+                else
+                {
+                $this->form_validation->errors();
+                }
+            }
         }
+        
+        public function deleteBooking($id)
+        {
+            if($this->Venue_model->deleteBooking($id))
+            {
+                redirect('/adminvenue_book');
+            }
+        }
+        
 
         public function booking($id)
         {
-            $data = $this->Venue_model->get_booking($id);
+            $data['venue'] = $this->Venue_model->get_booking($id);
+            $this->call->view('admin/edit_venue', $data);
         }
 
         public function editvenue(){
