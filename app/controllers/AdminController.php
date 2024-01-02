@@ -43,6 +43,7 @@ class AdminController extends Controller
 
         public function updatebooking(){
             $this->form_validation
+            ->name('venue')->required()
             ->name('fullname')->required()
             ->name('address')->required()
             ->name('email')->required()
@@ -50,16 +51,9 @@ class AdminController extends Controller
             ->name('duration')->required()
             ->name('datetime')->required()
             ->name('status')->required();
-            $fullname = $this->io->post('fullname');
-            $address = $this->io->post('address');
-            $email = $this->io->post('email');
-            $contact = $this->io->post('contact');
-            $duration = $this->io->post('duration');
-            $datetime = $this->io->post('datetime');
-            $status = $this->io->post('status');
-            if($this->form_validation->run()){
-
-                if($this->Venue_model->updateBooking($fullname, $address, $email, $contact, $duration, $datetime, $status))
+            if($this->form_validation->run())
+            {
+                if($this->Venue_model->editbooking($this->io->post('venue'), $this->io->post('fullname'), $this->io->post('address'), $this->io->post('email'), $this->io->post('contact'), $this->io->post('duration'), $this->io->post('datetime'), $this->io->post('status')))
                 {
                     redirect('/adminvenue_book');
                 } 
@@ -68,6 +62,13 @@ class AdminController extends Controller
                 $this->form_validation->errors();
                 }
             }
+        }
+
+        public function editbooking($id)
+        {
+            $data['updata'] = $this->Venue_model->get_booking($id);
+            $data['venue'] = $this->Venue_model->get_venue();
+            $this->call->view('editbooking', $data);
         }
         
         public function deleteBooking($id)

@@ -73,8 +73,8 @@ $router->get('/adminvenues', 'AdminController::venues');
 $router->get('/adminaudience_report', 'AdminController::audience_report');
 $router->get('/adminvenue_report', 'AdminController::venue_report');
 $router->get('/adminusers', 'AdminController::users');
+$router->match('/update', 'AdminController::updatebooking', 'GET|POST');
 $router->get('/updateBooking/(:any)', 'AdminController::booking');
-$router->match('/update', 'AdminController::updateBooking', 'GET|POST');
 $router->get('/deleteBooking/(:any)', 'AdminController::deleteBooking');
 
 $router->get('/venue_booklist', 'Home::venue_booklist');

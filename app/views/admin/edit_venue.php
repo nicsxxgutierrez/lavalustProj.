@@ -99,23 +99,26 @@
                                 <div class="card-body">
                                     <form action="<?=site_url('update')?>" method="post">
                                     <input type="hidden" value="<?= $venue['id']?>">
+                                        <label for="venue">Venue:
+                                        <input type="hidden" name="venue" value="<?=$venue['venue']?>"><h4><?=$venue['venue']?></h4></label>
+                                        
                                         <label for="fullname">Full Name</label><br>
-                                        <input type="text" id="fullname" name="fullname" placeholder="Enter your Full Name" value="<?= $venue['fullname']?>"><br>
+                                        <input type="text" id="fullname" name="fullname" value="<?= $venue['fullname']?>"><br>
 
                                         <label for="address">Address</label><br>
-                                        <input type="text" id="address" name="address" placeholder="Enter your Address" value="<?= $venue['address']?>"><br>
+                                        <input type="text" id="address" name="address" value="<?= $venue['address']?>"><br>
                                         
                                         <label for="email">Email</label><br>
-                                        <input type="text" id="email" name="email" placeholder="Enter your Email" value="<?= $venue['email']?>"><br>
+                                        <input type="text" id="email" name="email" value="<?= $venue['email']?>"><br>
 
                                         <label for="contact">Contact #</label><br>
-                                        <input type="text" id="contact" name="contact" placeholder="Enter your contact number" value="<?= $venue['contact']?>"><br>
+                                        <input type="text" id="contact" name="contact" value="<?= $venue['contact']?>"><br>
 
                                         <label for="duration">Duration</label><br>
-                                        <input type="text" id="duration" name="duration" placeholder="Enter how many days you will stay" value="<?= $venue['duration']?>"><br>
+                                        <input type="text" id="duration" name="duration" value="<?= $venue['duration']?>"><br>
 
                                         <label for="datetime">Desired Event Schedule</label><br>
-                                        <input type="datetime-local" class="form-control datetimepicker" name="datetime" value="<?= $venue['datetime']?>"><br>
+                                        <input type="text" class="form-control datetimepicker" name="datetime" value="<?=$venue['datetime']?>">
                                         <div class="form-group">
                                             <label for="" class="control-label">Status</label><br>
                                             <select name="status" id="" class="custom-select">
@@ -126,7 +129,7 @@
                                         </div><br>
                                         <button type="submit" class ="btn btn-success">Update</button><br><br>
                                     </form>
-                                        <a href="adminvenue_book" class= "btn btn-warning">Close</a>
+                                    <a href="<?= site_url('adminvenue_book')?>" class =" btn btn-warning">Close</a>
                                 </div>
                             </div>
                         </div>

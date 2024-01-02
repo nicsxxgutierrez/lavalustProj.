@@ -6,8 +6,7 @@ class Venue_model extends Model
 
     public function get_venue()
     {
-        $data = $this->db->table('venue')->get_all();
-        return $data;
+        return $this->db->table('venue')->get_all();
     }
 
     public function venue($venue, $address, $description, $rate, $file)
@@ -25,13 +24,13 @@ class Venue_model extends Model
     public function get_venueBooking()
     {
         $data= $this->db->table('venue_booking')->get_all();
-        
         return $data;
     }
 
-    public function updateBooking($id, $fullname, $address, $email, $contact, $datetime, $status)
+    public function editbooking($id, $venue, $fullname, $address, $email, $contact, $datetime, $status)
     {
         $data = array(
+        'venue' => $venue,
         'fullname' => $fullname,
         'address'=>$address,
         'email'=>$email,

@@ -16,7 +16,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 105vh;
+            height: 120vh;
         }
 
         .modal {
@@ -56,14 +56,15 @@
             background-color: #0056b3;
         }
 
-        .btn-secondary {
-            background-color: #6c757d;
+        .btn {
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            background-color: #545b62;
             color: white;
             cursor: pointer;
-        }
-
-        .btn-secondary:hover {
-            background-color: #545b62;
         }
     </style>
 
@@ -77,38 +78,45 @@
                         <div class="modal-body">
                             <form action="<?=site_url('booksave')?>" method="post">
                             <input type="hidden" value="<?=$get ['id'] ?>">
-                                <label for="venue">Venue:
-                                <input type="hidden" name="venue" value="<?=$get['venue']?>"><h4><?=$get['venue']?></h4> </label>
+                                <label for="venue">Venue:</label>
+                                <input type="hidden" name="venue" value="<?=$get['venue']?>"><h3><?=$get['venue']?></h3>
 
                                 <label for="fullname">Full Name</label>
-                                <input type="text" id="fullname" name="fullname"><br>
+                                <input type="text" id="fullname" name="fullname" required><br>
 
                                 <label for="address">Address</label>
-                                <input type="text" id="address" name="address"><br>
+                                <input type="text" id="address" name="address" required><br>
                                 
                                 <label for="email">Email</label>
-                                <input type="text" id="email" name="email"><br>
+                                <input type="text" id="email" name="email" required><br>
 
                                 <label for="contact">Contact Number</label>
-                                <input type="text" id="contact" name="contact"><br>
-
+                                <input type="text" id="contact" name="contact" required><br>
+                                
                                 <label for="duration">Duration</label>
-                                <input type="text" id="duration" name="duration"><br>
+                                <input type="text" id="duration" name="duration" required><br>
 
                                 <label for="schedule">Desired Event Schedule</label>
-                                <input type="datetime-local" id="Test_DatetimeLocal" name="datetime"><br><br>
+                                <input type="datetime-local"  class="form-control datetimepicker" name="datetime" required><br><br>
 
-                                <input type="hidden" value="for Verification" name="status">
+                                <input type="hidden" value="For Verification" name="status">
 
                                 <input type="submit" value="Submit Booking" class="btn btn-primary"></input>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary"><a href="venue">Close</button></a>
+                            <a href="<?= site_url('venue')?>" class =" btn btn-primary">Back</a>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <script>
+                $('.datetimepicker').datetimepicker({
+                    format:'Y/m/d H:i',
+                    startDate: '+3d'
+                })
+            </script>
 
 </body>
 </html>
