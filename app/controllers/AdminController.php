@@ -59,7 +59,7 @@ class AdminController extends Controller
                 } 
                 else
                 {
-                $this->form_validation->errors();
+                    $this->form_validation->errors();
                 }
             }
         }

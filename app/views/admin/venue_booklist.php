@@ -57,9 +57,9 @@
                                     <thead>
                                         <tr>
                                             <th class="text-center">#</th>
-                                            <th class="">Booking Information</th>
-                                            <th class="">Customer Information</th>
-                                            <th class="">Status</th>
+                                            <th class="text-center">Booking Information</th>
+                                            <th class="text-center">Customer Information</th>
+                                            <th class="text-center">Status</th>
                                             <th class="text-center">Action</th>
                                         </tr>
                                     </thead>
@@ -69,8 +69,8 @@
                                             <td><?= $abook['id'] ?></td>
                                             <td class="">
                                                 <p>Venue: <?= $abook['venue'] ?><b></b></p>
-                                                <p><small>Duration: <?= $abook['datetime'] ?></small></p>
-                                                <p><small>Schedule: <?= $abook['duration'] ?> <b></b></small></p>
+                                                <p><small>Duration: <?= $abook['duration'] ?></small></p>
+                                                <p><small>Schedule: <?= $abook['datetime'] ?> <b></b></small></p>
                                             </td>
                                             <td class="">
                                             <p>Booked by: <?= $abook['fullname'] ?></b></p>
