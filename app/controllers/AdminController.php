@@ -67,7 +67,7 @@ class AdminController extends Controller
         public function editbooking($id)
         {
             $data['updata'] = $this->Venue_model->get_booking($id);
-            $data['venue'] = $this->Venue_model->get_venue();
+            $data['venue_booking'] = $this->Venue_model->get_venue();
             $this->call->view('editbooking', $data);
         }
         

@@ -6,7 +6,7 @@ class Venue_model extends Model
 
     public function get_venue()
     {
-        return $this->db->table('venue')->get_all();
+        return $this->db->table('venue_booking')->get_all();
     }
 
     public function venue($venue, $address, $description, $rate, $file)
