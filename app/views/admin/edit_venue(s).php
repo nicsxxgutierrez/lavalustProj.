@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Venue Booking List</title>
+    <title>Edit Venue List</title>
 </head>
 <body>
     <style>
@@ -18,7 +18,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 130vh;
+            height: 100vh;
         }
 
         .card {
@@ -94,40 +94,30 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <b>Manage Booking List</b>
+                                    <b>Manage List of Venues</b>
                                 </div>
                                 <div class="card-body">
-                                    <form action="<?=site_url('updatebook')?>" method="post">
-                                        <input type="hidden" name="id" value="<?= $updata['id']?>">
+                                    <form action="<?=site_url('updatevenue')?>" method="post">
+                                        <input type="hidden" name = "id" value="<?= $edata['id']?>">
 
                                         <label for="venue">Venue:
-                                        <input type="hidden" name="venue" value="<?=$updata['venue']?>"><h4><?=$updata['venue']?></h4></label>
-                                        
-                                        <label for="fullname">Full Name</label><br>
-                                        <input type="text" id="fullname" name="fullname" value="<?= $updata['fullname']?>"><br>
+                                        <input type="hidden" name="venue" value="<?=$edata['venue']?>"><h4><?=$edata['venue']?></h4></label>
 
                                         <label for="address">Address</label><br>
-                                        <input type="text" id="address" name="address" value="<?= $updata['address']?>"><br>
+                                        <input type="text" id="address" name="address" value="<?= $edata['address']?>"><br>
+
+                                        <label for="description">Description</label><br>
+                                        <input type="text" id="description" name="description" value="<?= $edata['description']?>"><br>
+
+                                        <label for="rate">Rate</label><br>
+                                        <input type="text" id="rate" name="rate" value="<?= $edata['rate']?>"><br>
+
+                                        <label for="file">Images</label><br>
+                                        <input type="file" id="file" name="file_image" value="<?= $edata['file_image']?>"><br><br>
                                         
-                                        <label for="email">Email</label><br>
-                                        <input type="text" id="email" name="email" value="<?= $updata['email']?>"><br>
-
-                                        <label for="contact">Contact #</label><br>
-                                        <input type="text" id="contact" name="contact" value="<?= $updata['contact']?>"><br>
-
-                                        <label for="datetime">Desired Event Schedule</label><br>
-                                        <input type="datetime-local" class="form-control datetimepicker" name="datetime" value="<?=$updata['datetime']?>">
-                                        <div class="form-group">
-                                            <label for="" class="control-label">Status</label><br>
-                                            <select name="status" id="status" class="custom-select" value="<?= $updata['status']?>">
-                                                <option>For Verification</option>
-                                                <option>Confirmed</option>
-                                                <option>Cancelled</option>
-                                            </select>
-                                        </div><br>
                                         <button type="submit" class ="btn btn-success">Update</button><br><br>
                                     </form>
-                                    <a href="<?= site_url('adminvenue_book')?>" class =" btn btn-warning">Close</a>
+                                    <a href="<?= site_url('adminvenues')?>" class =" btn btn-warning">Close</a>
                                 </div>
                             </div>
                         </div>

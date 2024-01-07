@@ -122,24 +122,24 @@
                 <div class="row-items">
                     <div class="col-lg-12">
                         <div class="row">
-                            <?php foreach( $venue as $venue):?>
+                            <?php foreach( $venue as $v):?>
                             <div class="col-md-6">
                                 <div class="card venue-list">
                                     <div id="images"> 
-                                        <img src="public/venuepics/<?= $venue['file_image']?>" alt="pictures">
+                                        <img src="public/venuepics/<?= $v['file_image']?>" alt="pictures">
                                     </div>
                                     <div class="card-body">
                                         <div class="row align-items-center justify-content-center text-center h-100"> 
                                             <div class="">
                                                 <div> 
-                                                    <h3><b class="filter-txt"><?= $venue['venue']?></b></h3>
-                                                    <small><i><?= $venue['address']?></i></small> 
+                                                    <h3><b class="filter-txt"><?= $v['venue']?></b></h3>
+                                                    <small><i><?= $v['address']?></i></small> 
                                                 </div>
                                                 <div> 
-                                                    <span class="truncate" style="font-size: inherit;"><small><?= $venue['description']?></small></span><br>
+                                                    <span class="truncate" style="font-size: inherit;"><small><?= $v['description']?></small></span><br>
                                                     <span class="badge badge-secondary">
-                                                    <i class="fa fa-tag"></i> Rate Per Hour: <?= $venue['rate']?></span><br><br> 
-                                                    <a href="<?= site_url('/bookVenue/' . $venue['id'])?>" class =" btn btn-primary">Book Now</a>
+                                                    <i class="fa fa-tag"></i> Rate Per Hour: <?= $v['rate']?></span><br><br> 
+                                                    <a href="<?= site_url('/bookVenue/' . $v['id'])?>" class =" btn btn-primary">Book Now</a>
                                                 </div>
                                             </div> 
                                         </div> 
@@ -188,27 +188,6 @@
                 </div>
                     <p class="copyright">&copy;Copyright | <a href="https://youtu.be/D8VEhcPeSlc?si=1Z0Jf_6w1xaFRWD9"> Event </a></p>
             </footer>
-
-            <script>
-                $('.book-venue').click(function(){
-                    uni_modal("Submit Booking Request","booking.php?venue_id="+$(this).attr('data-id'))
-                })
-                $('.venue-list .carousel img').click(function(){
-                    viewer_modal($(this).attr('src'))
-                })
-                $('.book-venue').click(function () {
-                    var venueName = $(this).closest('.card-body').find('h3').text();
-                    var venueLocation = $(this).closest('.card-body').find('small').text();
-                    
-                    var modalContent = `<p>Booking request for <strong>${venueName}</strong> located at <em>${venueLocation}</em>.</p>`;
-                    $('#bookingModal .modal-body').html(modalContent);
-                    $('#bookingModal').modal('show');
-                });
-
-                $('.venue-list .carousel img').click(function () {
-                });
-
-            </script>
 
   </body>
 </html>

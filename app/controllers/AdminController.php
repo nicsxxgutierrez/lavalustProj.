@@ -4,7 +4,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 require 'app/config/autoload.php';
 
 class AdminController extends Controller 
-{	
+{
         public function registerview(){
             $this->call->view('admin/register');
         }
@@ -41,34 +41,42 @@ class AdminController extends Controller
             $this->call->view('/admin/venue_booklist', $data);
         }
 
-        public function updatebooking(){
-            $this->form_validation
-            ->name('venue')->required()
-            ->name('fullname')->required()
-            ->name('address')->required()
-            ->name('email')->required()
-            ->name('contact')->required()
-            ->name('duration')->required()
-            ->name('datetime')->required()
-            ->name('status')->required();
-            if($this->form_validation->run())
+        public function venues(){
+            $data['venues'] = $this->Venue_model->get_venues();
+            $this->call->view('/admin/venues', $data);
+        }
+
+        public function updatebooking()
+        {
+            if($this->form_validation->submitted())
             {
-                if($this->Venue_model->editbooking($this->io->post('venue'), $this->io->post('fullname'), $this->io->post('address'), $this->io->post('email'), $this->io->post('contact'), $this->io->post('duration'), $this->io->post('datetime'), $this->io->post('status')))
+                $this->form_validation
+                ->name('venue')->required()
+                ->name('fullname')->required()
+                ->name('address')->required()
+                ->name('email')->required()
+                ->name('contact')->required()
+                ->name('datetime')->required()
+                ->name('status')->required();
+                if($this->form_validation->run())
                 {
-                    redirect('/adminvenue_book');
-                } 
-                else
-                {
-                    $this->form_validation->errors();
+                    if($this->Venue_model->editbooking($this->io->post('id'), $this->io->post('venue'), $this->io->post('fullname'), $this->io->post('address'), $this->io->post('email'), $this->io->post('contact'), $this->io->post('datetime'), $this->io->post('status')))
+                    {
+                        redirect('/adminvenue_book');
+                    } 
+                    else
+                    {
+                        $this->form_validation->errors();
+                    }
                 }
             }
         }
 
         public function editbooking($id)
         {
-            $data['updata'] = $this->Venue_model->get_booking($id);
-            $data['venue_booking'] = $this->Venue_model->get_venue();
-            $this->call->view('editbooking', $data);
+            $data['updata'] = $this->Venue_model->getbooklist($id);
+            $data['venue_booking'] = $this->Venue_model->get_booking();
+            $this->call->view('admin/edit_venue', $data);
         }
         
         public function deleteBooking($id)
@@ -85,15 +93,6 @@ class AdminController extends Controller
             $this->call->view('admin/edit_venue', $data);
         }
 
-        public function editvenue(){
-            $this->call->view('/admin/edit_venue');
-        }
-
-        public function venues(){
-            $data['venues'] = $this->Venue_model->get_venues();
-            $this->call->view('/admin/venues', $data);
-        }
-
         public function audience_report(){
             $this->call->view('/admin/audience_report');
         }
@@ -103,8 +102,12 @@ class AdminController extends Controller
         }
 
         public function users(){
-            $data['user'] = $this->Venue_model->get_users();
+            $data['user'] = $this->Venue_model->users();
             $this->call->view('/admin/users', $data);
+        }
+
+        public function edit_users(){
+            $this->call->view('/admin/edit_users');
         }
 
         public function adminregister(){
@@ -151,7 +154,83 @@ class AdminController extends Controller
             else{
                 redirect('/adminhome');
             }
-           
         }
-    }
+
+        public function updatevenues()
+        {
+            if($this->form_validation->submitted())
+            {
+                $this->form_validation
+                ->name('venue')->required()
+                ->name('address')->required()
+                ->name('description')->required()
+                ->name('rate')->required()
+                ->name('file_image')->required();
+                if($this->form_validation->run())
+                {
+                    if($this->Venue_model->edit_venues($this->io->post('id'), $this->io->post('venue'), $this->io->post('address'), $this->io->post('description'), $this->io->post('rate'), $this->io->post('file_image')))
+                    {
+                        redirect('/adminvenues');
+                    } 
+                    else
+                    {
+                        $this->form_validation->errors();
+                    }
+                }
+            }
+        }
+
+        public function editvenues($id)
+        {
+            $data['edata'] = $this->Venue_model->getvenuelist($id);
+            $data['venues'] = $this->Venue_model->get_venues();
+            $this->call->view('admin/edit_venue(s)', $data);
+        }
+
+        public function deletevenues($id)
+        {
+            if($this->Venue_model->deletevenues($id))
+            {
+                redirect('/adminvenues');
+            }
+        }
+
+        public function updateusers()
+        {
+            if($this->form_validation->submitted())
+            {
+                $this->form_validation
+                ->name('name')->required()
+                ->name('username')->required()
+                ->name('password')->required()
+                ->name('type')->required();
+                if($this->form_validation->run())
+                {
+                    if($this->Venue_model->edit_users($this->io->post('id'), $this->io->post('name'), $this->io->post('username'), password_hash($this->io->post('password'), PASSWORD_DEFAULT), $this->io->post('type')))
+                    {
+                        redirect('/adminusers');
+                    } 
+                    else
+                    {
+                        $this->form_validation->errors();
+                    }
+                }
+            }
+        }
+
+        public function editusers($id)
+        {
+            $data['euser'] = $this->Venue_model->getuserslist($id);
+            $data['users'] = $this->Venue_model->get_users();
+            $this->call->view('admin/edit_users', $data);
+        }
+
+        public function deleteusers($id)
+        {
+            if($this->Venue_model->deleteusers($id))
+            {
+                redirect('/adminusers');
+            }
+        }
+}
 ?>

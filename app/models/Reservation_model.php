@@ -6,7 +6,7 @@ class Reservation_model extends Model {
         $this->db->table('venue_booking')->get_all();
     }
 
-    public function booksave($venue, $fullname, $address, $email, $contact, $duration, $datetime, $status)
+    public function booksave($venue, $fullname, $address, $email, $contact, $datetime, $status)
     {
         $data = array(
             'venue'=> $venue,
@@ -14,7 +14,6 @@ class Reservation_model extends Model {
             'address' => $address,
             'email' => $email,
             'contact' => $contact,
-            'duration' => $duration,
             'datetime' => $datetime,
             'status' => $status
         );

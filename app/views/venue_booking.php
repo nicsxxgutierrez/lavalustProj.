@@ -92,9 +92,6 @@
 
                                 <label for="contact">Contact Number</label>
                                 <input type="text" id="contact" name="contact" required><br>
-                                
-                                <label for="duration">Duration</label>
-                                <input type="text" id="duration" name="duration" required><br>
 
                                 <label for="schedule">Desired Event Schedule</label>
                                 <input type="datetime-local"  class="form-control datetimepicker" name="datetime" required><br><br>

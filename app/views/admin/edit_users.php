@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Venue Booking List</title>
+    <title>Edit User List</title>
 </head>
 <body>
     <style>
@@ -18,7 +18,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 130vh;
+            height: 100vh;
         }
 
         .card {
@@ -94,40 +94,32 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <b>Manage Booking List</b>
+                                    <b>Manage List of Users</b>
                                 </div>
                                 <div class="card-body">
-                                    <form action="<?=site_url('updatebook')?>" method="post">
-                                        <input type="hidden" name="id" value="<?= $updata['id']?>">
+                                    <form action="<?=site_url('updateuser')?>" method="post">
+                                        <input type="hidden" name = "id" value="<?= $euser['id']?>">
 
-                                        <label for="venue">Venue:
-                                        <input type="hidden" name="venue" value="<?=$updata['venue']?>"><h4><?=$updata['venue']?></h4></label>
-                                        
-                                        <label for="fullname">Full Name</label><br>
-                                        <input type="text" id="fullname" name="fullname" value="<?= $updata['fullname']?>"><br>
+                                        <label for="name">Name</label><br>
+                                        <input type="text" id="name" name="name" value="<?= $euser['name']?>"><br>
 
-                                        <label for="address">Address</label><br>
-                                        <input type="text" id="address" name="address" value="<?= $updata['address']?>"><br>
-                                        
-                                        <label for="email">Email</label><br>
-                                        <input type="text" id="email" name="email" value="<?= $updata['email']?>"><br>
+                                        <label for="username">Username</label><br>
+                                        <input type="text" id="username" name="username" value="<?= $euser['username']?>"><br>
 
-                                        <label for="contact">Contact #</label><br>
-                                        <input type="text" id="contact" name="contact" value="<?= $updata['contact']?>"><br>
+                                        <label for="password">Password</label><br>
+                                        <input type="text" id="password" name="password" value="<?= $euser['password']?>"><br>
 
-                                        <label for="datetime">Desired Event Schedule</label><br>
-                                        <input type="datetime-local" class="form-control datetimepicker" name="datetime" value="<?=$updata['datetime']?>">
                                         <div class="form-group">
-                                            <label for="" class="control-label">Status</label><br>
-                                            <select name="status" id="status" class="custom-select" value="<?= $updata['status']?>">
-                                                <option>For Verification</option>
-                                                <option>Confirmed</option>
-                                                <option>Cancelled</option>
+                                            <label for="type" class="control-label">Type</label><br>
+                                            <select name="type" id="type" class="custom-select" value="<?= $euser['type']?>">
+                                                <option>Admin</option>
+                                                <option>Staff</option>
                                             </select>
                                         </div><br>
+                                        
                                         <button type="submit" class ="btn btn-success">Update</button><br><br>
                                     </form>
-                                    <a href="<?= site_url('adminvenue_book')?>" class =" btn btn-warning">Close</a>
+                                    <a href="<?= site_url('adminusers')?>" class =" btn btn-warning">Close</a>
                                 </div>
                             </div>
                         </div>

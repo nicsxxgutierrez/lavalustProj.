@@ -16,19 +16,11 @@ class ReservationController extends Controller {
 		if($this->form_validation->submitted()){
             $this->form_validation
                 ->name('venue')->required()
-                ->min_length(2)
                 ->name('fullname')->required()
-                ->min_length(2)
                 ->name('address')->required()
-                ->min_length(2)
                 ->name('email')->required()
-                ->min_length(2)
                 ->name('contact')->required()
-                ->min_length(2)
-                ->name('duration')->required()
-                ->min_length(2)
                 ->name('datetime')->required()
-                ->min_length(2)
                 ->name('status')->required();
             if($this->form_validation->run())
             {
@@ -38,7 +30,6 @@ class ReservationController extends Controller {
                     $this->io->post('address'),
                     $this->io->post('email'),
                     $this->io->post('contact'),
-                    $this->io->post('duration'),
                     $this->io->post('datetime'),
                     $this->io->post('status')))
                 {
