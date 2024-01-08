@@ -107,13 +107,6 @@
                     </div>
                 </div>
             </div>
-            
-            <script>
-                $('.datetimepicker').datetimepicker({
-                    format:'Y/m/d H:i',
-                    startDate: '+3d'
-                })
-            </script>
 
 </body>
 </html>

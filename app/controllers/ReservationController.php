@@ -13,7 +13,8 @@ class ReservationController extends Controller {
 
     }
     public function booksave(){
-		if($this->form_validation->submitted()){
+		if($this->form_validation->submitted())
+        {
             $this->form_validation
                 ->name('venue')->required()
                 ->name('fullname')->required()
@@ -41,9 +42,7 @@ class ReservationController extends Controller {
                 }
             }
         } 
-        $data['home'] = $this->Dashboard_model->getbooks();
-        $this->call->view('admin/allbooks', $data); 
-	}
+    }
 
     public function get_venue($id)
     {

@@ -50,15 +50,15 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            Event Audience Report
+                            Venue Audience Report
                         </div>
                         <div class="card-body">
                             <div class="col-md-12">
                                 <form action="" id="filter">
                                     <div class="row form-group">
                                         <div class="col-md-4">
-                                            <label for="" class="control-label">Event</label>
-                                            <select name="event_id" id="event_id" class="custom-select select2">
+                                            <label for="" class="control-label">Venue</label>
+                                            <select name="venue" id="venue" class="custom-select select2" >
                                                 <option></option>
                                             </select>
                                         </div>
@@ -89,7 +89,7 @@
                                             <th class="text-center">Payment Status</th>
                                         </thead>
                                         <tbody>
-                                            <tr><th colspan="5"><center>Select Event First.</center></th></tr>
+                                            <tr><th colspan="5"><center>Select Venue First.</center></th></tr>
                                         </tbody>
                                     </table>
                                 </div>
