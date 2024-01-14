@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 25, 2023 at 08:33 AM
+-- Generation Time: Jan 14, 2024 at 10:05 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -120,16 +120,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`ID`, `LastName`, `FirstName`, `ContactNo`, `username`, `email`, `password`, `Created_at`) VALUES
-(1, 'Gutierrez', 'Nicolle', '09286341210', 'nicsxxx', 'rcolleen278@gmail.com', '$2y$10$jQujZ02ZXfxwmryesk4EneyNawZE3ruRK822sl2KZS.GQgCQlqzDm', '2023-12-25 09:37:46'),
-(3, 'Gutierrez', 'Nicolle', '09286341210', 'colleen', 'gutierreznicollecatly@gmail.com', '$2y$10$oqJR/6RJIveJ9896FpUojuAcF/mwx4A0aSO/rBDL4PuLcRawKm6nG', '2023-12-25 10:27:08'),
-(4, 'Abaca', 'Rhigen', '+639632569860', 'rhigenmwhehe', 'abacarhigen@example.com', '$2y$10$WJw37eBu4iFeQlTJya.4xO2NDcyuGdRV39Y0JmkYdZVC9ACiTckSW', '2023-12-25 10:48:13'),
-(5, 'Abaca', 'Rhigen', '+639632569860', 'rhigenmwhehe', 'abacarhigen@example.com', '$2y$10$LaUM2zWyovORHFUVLOxtnenNWqLmeHIt3/kW8ncF./CqvRzYQe9gu', '2023-12-25 10:48:40'),
-(6, 'Abaca', 'Rhigen', '+639632569860', 'rhigenmwhehe', 'abacarhigen@example.com', '$2y$10$hqWEWlzH7ggRVCDbauDZ4.SHCW2n27RbWsaciSBfX1Md4uhdGODXm', '2023-12-25 10:50:48'),
-(7, 'Abaca', 'Rhigen', '+639632569860', 'rhigenmwhehe', 'abacarhigen@example.com', '$2y$10$BsLWtX3hxUlFehaz9ZP0BeYWtk1uuUECyVFLDo0ZIGIklmYJvfhWW', '2023-12-25 10:50:58'),
-(8, 'Abaca', 'Rhigen', '+639632569860', 'rhigenmwhehe', 'abacarhigen@example.com', '$2y$10$PrKezyqZ75F0t6pX3YLbW.uGNoLh63uieg7J91VmG8j4lt7xXs3yK', '2023-12-25 10:51:32'),
-(9, 'Abaca', 'Rhigen', '+639632569860', 'rhigenmwhehe', 'abacarhigen@example.com', '$2y$10$5ebyfh2njv1pH0jwf9KqJObKygWtIfmkpRPf/wMnNm8JHkUsBc0fq', '2023-12-25 10:51:38'),
-(10, 'Abaca', 'Rhigen', '+639632569860', 'rhigenmwhehe', 'abacarhigen@example.com', '$2y$10$CeQSkYpsmaM56blh.ZL4Be1ZU8YVM8sWI4.P/LujKBKvfStpT7te.', '2023-12-25 10:52:14'),
-(11, 'Abaca', 'Rhigen', '+639632569860', 'rhigenmwhehe', 'abacarhigen@example.com', '$2y$10$RwpGMZm/mJ/y584g4jJy0eiN4Tda6LYfTnpClu.tbS8zE.kdCH.IK', '2023-12-25 10:52:33');
+(1, 'Cortez', 'John', '+639876732543', 'john', 'cortezjohn@gmail.com', '$2y$10$hPXn509dFq3X.gSTh3.hEuLJHvLne6MBhQ7ymMgwFT3tRL.IrgoWy', '2023-12-30 18:36:04'),
+(3, 'Santos', 'Ava', '+639572048613', 'ava25', 'santosava@gmail.com', '$2y$10$SMDs.eNa3eDLx17K.d2g6e64DrhjC/y0BRqjXOqBcat0jJUpbLZuC', '2023-12-30 18:39:22'),
+(4, 'Gutierrez', 'Nicolle', '+639286341210', 'nicolle17', 'nicolle@gmail.com', '$2y$10$7RsJtp2dW76SbwheZQfqFOrO0Tsn470ICELm5gtrsgPdyS6vJ7NX2', '2023-12-30 19:39:19');
 
 -- --------------------------------------------------------
 
@@ -142,7 +135,7 @@ CREATE TABLE `users` (
   `name` text COLLATE utf8mb4_general_ci NOT NULL,
   `username` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
   `password` text COLLATE utf8mb4_general_ci NOT NULL,
-  `type` tinyint(1) NOT NULL DEFAULT '2' COMMENT '1=Admin,2=Staff'
+  `type` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -150,7 +143,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `username`, `password`, `type`) VALUES
-(1, 'Administrator', 'admin', '0192023a7bbd73250516f069df18b500', 1);
+(3, 'John Cortez', 'john2', '$2y$10$qMVbKFoDaZKst5TKyt4U5udodTgL.0n2fGae0.ZsPrDFrgON2.cI6', 'Admin'),
+(4, 'Rachell De Guzman', 'rachell78', '$2y$10$Hl.CAHEzkonBdOCREXZK7eixcMTQhESGMYl9n9pRmjCPXFNLYTGBu', 'Admin'),
+(6, 'Dan Keneth Rontale', 'rontale12', '$2y$10$/bprQglG5ED7BPx3fDUlWONpl9btzsmA.QlkkwXJK3acxjv4ScRAy', 'Admin');
 
 -- --------------------------------------------------------
 
@@ -163,21 +158,23 @@ CREATE TABLE `venue` (
   `venue` text COLLATE utf8mb4_general_ci NOT NULL,
   `address` text COLLATE utf8mb4_general_ci NOT NULL,
   `description` text COLLATE utf8mb4_general_ci NOT NULL,
-  `rate` float NOT NULL
+  `rate` float NOT NULL,
+  `file_image` varchar(150) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `venue`
 --
 
-INSERT INTO `venue` (`id`, `venue`, `address`, `description`, `rate`) VALUES
-(1, 'Uncle Jov\'s', 'Roxas Drive, 5200 Calapan City, Oriental Mindoro.', 'Uncle Jov\'s is famous for their burgers, this place is perfect for Celebrating Parties and hanging out with family and friends', 300),
-(2, 'Halcon\'s Bar and Resto', 'Filipiniana Complex, Sto. Niño 5200 Calapan City, Oriental Mindoro', 'Best choice for Birthday Party, Wedding, and other Occations.', 250),
-(3, 'Orange Dutch Cafe', 'J.P Rizal Street, 5200, Calapan City, Oriental Mindoro', 'Private Birthday Party, Wedding and other Occations with family and some guests.\r\n', 280),
-(4, 'Blossom Food Delight', 'J.P. Rizal Street, San Vicente North Mimaropa', 'Private Parties, Weddings, Birthday party, with limited participants.', 500),
-(5, 'Cafe Meow', 'Ilaya, 5200, Calapan City, Oriental Mindoro', 'Birthday parties, Celebrating Occations with selected guest like family, friends, or co-workers.', 250),
-(6, 'Tagpuan Bistro', '2f Tomas Montellano Bldg., Gov.Infantado St., Sta. Maria Village , 5200, Calapan City, Oriental Mindoro', 'Small Celebration with friends and family.', 150),
-(7, 'Shakey\'s Pizza Parlor', 'J.P. Rizal Street, Brgy. Camilmil, Calapan City, Oriental Mindoro', 'Perfect place to conduct any social gatherings.', 199);
+INSERT INTO `venue` (`id`, `venue`, `address`, `description`, `rate`, `file_image`) VALUES
+(1, 'Uncle Jov', 'Roxas Drive, 5200 Calapan City, Oriental Mindoro.', 'Uncle Jov\'s is famous for their burgers, this place is perfect for Celebrating Parties and hanging out with family and friends', 300, 'uncle_jovs.png'),
+(2, 'Halcon\'s Bar and Resto', 'Filipiniana Complex, Sto. Niño 5200 Calapan City, Oriental Mindoro', 'Best choice for Birthday Party, Wedding, and other Occations.', 250, 'halcon.jpg'),
+(3, 'Orange Dutch Cafe', 'J.P Rizal Street, 5200, Calapan City, Oriental Mindoro', 'Private Birthday Party, Wedding and other Occations with family and some guests.\r\n', 280, 'dutch_cafe.png'),
+(4, 'Riceland Inn II Hotel', 'M.H. Del Pilar Street, Sto. Nino 5200 Calapan Oriental Mindoro', 'Private Parties, Weddings, Birthday party, with limited participants.', 500, 'riceland.jpg'),
+(5, 'Cafe Meow', 'Ilaya, 5200, Calapan City, Oriental Mindoro', 'Birthday parties, Celebrating Occations with selected guest like family, friends, or co-workers.', 250, 'cafe_meow.png'),
+(6, 'Tagpuan Bistro', '2f Tomas Montellano Bldg., Gov.Infantado St., Sta. Maria Village , 5200, Calapan City, Oriental Mindoro', 'Small Celebration with friends and family.', 150, 'tagpuan_bistro.jpg'),
+(7, 'Shakey\'s Pizza Parlor', 'J.P. Rizal Street, Brgy. Camilmil, Calapan City, Oriental Mindoro', 'Perfect place to conduct any social gatherings.', 199, 'shakeys.png'),
+(8, 'Filipiniana Hotel', 'M. Roxas St., Brgy Sto. Nino, Calapan City, Oriental Mindoro', 'Perfect place to conduct big social gatherings like wedding or party.', 800, 'filipiniana.png');
 
 -- --------------------------------------------------------
 
@@ -187,26 +184,28 @@ INSERT INTO `venue` (`id`, `venue`, `address`, `description`, `rate`) VALUES
 
 CREATE TABLE `venue_booking` (
   `id` int NOT NULL,
-  `name` text COLLATE utf8mb4_general_ci NOT NULL,
+  `venue` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `fullname` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `address` text COLLATE utf8mb4_general_ci NOT NULL,
   `email` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
   `contact` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `venue_id` int NOT NULL,
-  `duration` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `datetime` datetime NOT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0-for verification,1=confirmed,2=canceled'
+  `datetime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `status` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `venue_booking`
 --
 
-INSERT INTO `venue_booking` (`id`, `name`, `address`, `email`, `contact`, `venue_id`, `duration`, `datetime`, `status`) VALUES
-(1, 'John Smith', 'Sample', 'asdasd@gmail.com', '+18456-5455-55', 2, '1 night', '2020-10-14 17:00:00', 1),
-(2, 'Bryan Marcos', 'Calapan', 'marcos@gmail.com', '09876543212', 1, '1 day', '2023-06-07 09:30:00', 1),
-(3, 'ryanpoll', 'calapan', 'pryan@gamil.com', '09896744321', 4, '2 days', '2023-06-12 10:00:00', 0),
-(4, 'Bryan Marcos', 'Silonay, Calapan', 'bryan@gmail.com', '09087323761', 3, '1 day', '2023-06-27 08:00:00', 1),
-(5, 'bryan marcos', 'calapan city', 'bryan@gmail.com', '09987654321', 4, '1 day', '2023-06-30 09:00:00', 0);
+INSERT INTO `venue_booking` (`id`, `venue`, `fullname`, `address`, `email`, `contact`, `datetime`, `status`) VALUES
+(1, 'Uncle Jov', 'Ethan Jay Mendoza', 'Lalud, Calapan City', 'mendozaethan@example.com', '+639367641298', '2024-01-31 13:00:00', 'Confirmed'),
+(2, 'Riceland Inn II Hotel', 'Rachell De Guzman', 'Putingtubig', 'rdguzman278@gmail.com', '+639365742109', '2024-01-15 08:00:00', 'Confirmed'),
+(3, 'Shakey\'s Pizza Parlor', 'Ava Santos', 'Bayanan II, Calapan City', 'santosava@example.com', '+639572048613', '2024-01-10 17:00:00', 'Confirmed'),
+(4, 'Orange Dutch Cafe', 'Kimberly Sotto', 'Naujan, Oriental Mindoro', 'kimsotto@example.com', '+639632569860', '2024-01-08 14:57:00', 'Confirmed'),
+(5, 'Uncle Jov', 'Kimberly Sotto', 'Naujan, Oriental Mindoro', 'kimsotto@example.com', '+639632569860', '2024-01-15 07:05:00', 'Confirmed'),
+(6, 'Orange Dutch Cafe', 'Colleen Reyes', 'Putingtubig, Calapan City', 'rcolleen278@gmail.com', '+639572048613', '2024-01-21 10:00:00', 'For Verification'),
+(7, 'Halcon\'s Bar and Resto', 'Aldrich Gutierrez', 'Lalud, Calapan City', 'aldrich@gmail.com', '+639264058255', '2024-01-10 14:00:00', 'For Verification'),
+(8, 'Tagpuan Bistro', 'Nymfa Gutierrez', 'Masipit, Calapan City', 'nymfagutierrez@gmail.com', '+639230475961', '2024-01-11 09:10:00', 'For Verification');
 
 --
 -- Indexes for dumped tables
@@ -280,25 +279,25 @@ ALTER TABLE `system_settings`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `venue`
 --
 ALTER TABLE `venue`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `venue_booking`
 --
 ALTER TABLE `venue_booking`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
